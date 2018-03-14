@@ -55,7 +55,7 @@ height: 200px;
         <button class="btn2 btn-info pull-right MRTop" style="margin-left: 1%;margin-right: 1%;" data-toggle="modal" data-target="#FeedbackModal" title="Feedback"><i class="fa fa-comments-o" ></i></button>
         </button>
             <div class="panel panel-info">
-                <div class="w3-padding w2-xlarge w2-teal" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6">
+                <div class="w3-padding w2-xlarge w2-teal" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 || userinfodata.RoleId==7">
                     <button class="btn1" ui-sref="home"><i class="fa fa-home"></i> Home</button>
 
                    </div>
@@ -163,7 +163,7 @@ height: 200px;
                                         <option value="">--Select Type--</option>
                                         <option value="ReportBugs">ReportBugs</option>
                                         <option value="Suggest">Suggest</option>
-                                        <option value="Feedback">Feedback</option>
+                                        <option value="Enhancement">Enhancement</option>
                                     </select>
                                 </div>
                             </div>

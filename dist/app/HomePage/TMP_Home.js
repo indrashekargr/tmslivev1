@@ -28,27 +28,19 @@ window.$scope = $scope;
         }
     }
 
-
-  /*  $scope.allemployeeList = function(){
-
-    $http.get(ApiUrlPrefix + "externalemployeeRepository").success(function (data) {
-        // $scope.allemployeeList = data;
-        // console.log( $scope.allemployeeList);
-        console.log(data);
-    });
-}
-// allemployeeList(); */
-
-
-   //Reset Button
+   //Reset Button for HR Module
     $scope.reset  = function(){
         $http.get(ApiUrlPrefix + "fetchAllEmployeeDataByHR").success(function (data) {
             $scope.currentEmployeeList = data;
         });
     }
-    // allemployeeList();
 
-
+    //Reset Button for BU_Head Module
+    $scope.resetbu  = function(){
+        $http.get(ApiUrlPrefix + "fetchEmployeeMasterDetailsBasedOnBuId/" + $scope.userinfodata.BuId).success(function (response) {
+            $scope.buEmployeeList = response;
+        });
+    }
 
 //Search employee resource skills data for hr
 $scope.searchskill = function(q,r,s,t)
@@ -819,7 +811,9 @@ $scope.editEmployeeStatus = function (EmployeeId) {
 $scope.AvailabilityStatuses = ['Yes','No'];
 $http.get(ApiUrlPrefix + "fetchEmployeeMasterDetailsBasedOnEmpId/" + EmployeeId).success(function (response) {
 $scope.employee = response[0];
-//console.log(response);
+    $scope.employee.DateOfBirth = new Date($scope.employee.DateOfBirth);
+    $scope.employee.DateOfJoining = new Date($scope.employee.DateOfJoining);
+
 });
 
 
