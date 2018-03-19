@@ -63,7 +63,9 @@ ng-bind="showInputsArticleWithInput? 'Dashboard': 'Edit Skills'">
 </button>
 <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" data-toggle="modal" data-target="#FeedbackModal" title="Feedback"><i class="fa fa-comments-o" ></i></button>
 </button>
-
+   <!-- <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="feedback" title="Feedback"><i class="fa fa-comments-o" ></i></button>
+    </button>
+-->
 <!--  <a type="button" class="pull-right btn btn-box-tool" style="color:white;"
 style="cursor:pointer;width: 30px;">
 </a> -->
@@ -431,7 +433,7 @@ color: #23b7e5;
 ">Talk With Us</h4>
 </div>
 <div class="modal-body">
-<form role="form">
+<form role="form2">
 <div class="row">
 <input type="hidden" ng-model="userinfodata.EmployeeId" class="form-control" readonly="readonly">
 <div class="col-lg-5">
@@ -469,7 +471,7 @@ padding-left: 4%;
 </form>
 </div>
 <div class="modal-footer text-center" style="text-align: center; margin-top: -8%;">
-<button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addFeedbackform(Type,Details)">Send</button>
+<button type="button"  class="mb-sm btn btn-primary btn-outline" ng-click="addFeedbackform(Type,Details)">Send</button>
 <!--<button type="reset" class="mb-sm btn btn-danger btn-outline " ng-click="Clear()" data-dismiss="modal">Close</button> -->
 </div>
 </div>
@@ -717,7 +719,7 @@ text-align: center;
 ">
 <b>Project Tracking</b>
 <div ng-if = !trackdata[0].addAction>
-<a type="button" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3" class="pull-right btn btn-box-tool" style="color:white;">
+<a type="button" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7 " class="pull-right btn btn-box-tool" style="color:white;">
 <img src="assets/images/icons/add.png" data-toggle="modal" data-target="#AddTrakingModal" ng-click="clearTrack()" title="Add Project"
 style="cursor:pointer;width: 30px;">
 </a>
@@ -804,7 +806,7 @@ class="width_edit_icon" data-toggle="tooltip" data-placement="top">
 </a>&nbsp;&nbsp; -->
 <div ng-if = !track.Action> <label>Project Closed</label> </div>
 <div ng-if = track.Action >
-<a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5" ng-click="updatetrack(track.Id,track.UserId,track.ProjectName,track.CompanyName,track.FromDate,track.ToDate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
+<a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==7" ng-click="updatetrack(track.Id,track.UserId,track.ProjectName,track.CompanyName,track.FromDate,track.ToDate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
 data-toggle="modal" data-target="#EditTrackModal" data-whatever="@mdo">
 <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
 class="width_edit_icon" data-toggle="tooltip" data-placement="top">
@@ -907,7 +909,7 @@ Master
 
 
 <!-- Edit Tracking Project Modal Start -->
-<div class="modal fade bs-example-modal-lg" ng-if="userinfodata.RoleId==5" id="EditTrackModal" tabindex="-1" role="dialog"
+<div class="modal fade bs-example-modal-lg" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==7" id="EditTrackModal" tabindex="-1" role="dialog"
 aria-labelledby="myLargeModalLabel">
 <div class="modal-dialog modal-md" role="document">
 <div class="modal-content">
@@ -1557,13 +1559,32 @@ Role
 </div>
 </div>
 </article>
-<article ng-if="!showInputsArticleWithInput">
-<iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMWY3MjNlOTEtZTgwYS00ZTQzLTlhNGItMDczODZhNTE3OGY3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
-<!--<iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiNzFkZTQzMjQtMGVmYS00OTU5LTk4NTctNjgxODM2YTBmZmY3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>-->
-<!-- <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMTBmMmU0YjAtOTZkMC00MjUyLWE0OWMtZjYwYmUwYzRlZjZhIiwidCI6IjdiMjJiNGQ1LTMzZDktNDk1Ni04ZDdmLWE2NTc4MTVmODIwMyJ9" frameborder="0" allowFullScreen="true"></iframe>-->
-<!--<iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiNzliMzk5ODAtMDY0Ni00Mjg0LWJhZWYtYzQxNjE1OTc5Y2ZiIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>-->
+    <article ng-if="!showInputsArticleWithInput">
+    <article ng-if="userinfodata.RoleId==6">
+        <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMWY3MjNlOTEtZTgwYS00ZTQzLTlhNGItMDczODZhNTE3OGY3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+    </article>
+        <article ng-if="userinfodata.RoleId==5">
+            <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMWY3MjNlOTEtZTgwYS00ZTQzLTlhNGItMDczODZhNTE3OGY3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        </article>
+<article ng-if="userinfodata.RoleId==7 && userinfodata.BuId==1 ">
+   <!-- <div ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 ">-->
+    <iframe  width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiZmQwNTZhNTgtNzMxMy00MzYzLTlkZDktOGE5NzViNTQzODA3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+</article>
+    <article ng-if="userinfodata.RoleId==7  && userinfodata.BuId==4 ">
+        <!-- <div ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 ">-->
+        <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiODZhODE3MzMtNjgzZC00MzgyLWFmMDMtNmZiYzU0MmE3YzUyIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+    </article>
 
-<div class="modal fade" id="FeedbackModal" tabindex="-1" ng-if="!showInputsArticleWithInput" role="dialog" aria-labelledby="feedbackModalLabel">
+
+    </article>
+  <!--  </div>-->
+   <!-- <div ng-if="userinfodata.RoleId==7 && userinfodata.buid==1">-->
+
+  <!--  </div>-->
+   <!-- <div ng-if="userinfodata.RoleId==7 && userinfodata.buid==4">-->
+
+   <!-- </div>-->
+<div class="modal fade" id="FeedbackModal" ng-controller="feedbackctl" tabindex="-1" ng-if="!showInputsArticleWithInput" role="dialog" aria-labelledby="feedbackModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content" style="width: 376px;height: 269px;margin-left: 15%;margin-top: 10%;">
 <div class="modal-header">
@@ -1614,7 +1635,8 @@ padding-left: 4%;
 </form>
 </div>
 <div class="modal-footer text-center" style="text-align: center; margin-top: -8%;">
-<button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addFeedbackform(Type,Details)">Send</button>
+<button type="button" class="mb-sm btn btn-primary btn-outline"  ng-click="addFeedbackform(Type,Details)">Send</button>
+
 <!--<button type="reset" class="mb-sm btn btn-danger btn-outline " ng-click="Clear()" data-dismiss="modal">Close</button> -->
 </div>
 </div>

@@ -1,7 +1,6 @@
 var ApiUrlPrefix = "/";
 
 app.controller('homeCtrl', function ($rootScope, $scope, $http, $state, $stateParams,loginAuthentication, $interval, $window, $location, $timeout,$filter) {
-
 $scope.userinfodata = loginAuthentication.getLoggedInUserInfo();
 console.log($scope.userinfodata);
 console.log($scope.userinfodata.EmployeeId);
@@ -270,16 +269,18 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
             $http.post(ApiUrlPrefix + 'addFeedback', newFeedback).then(function (response) {
                 if (response.data) {
                     alert("Thank you for your valuable feedback...");
-                    $location.path( "/home" );
+                   // $location.path( "/home" );
+
                     $("#FeedbackModal").modal("hide");
                    $("#AddSkillModal").modal("hide");
                 }
-
             },function(error){
                 console.log(error);
             });
         }
     }
+
+
 
   // Add Employee Tracking Profile
   $scope.addTracking = function(a,b,c,d,e,ci,fn,ln) {
@@ -813,6 +814,7 @@ $http.get(ApiUrlPrefix + "fetchEmployeeMasterDetailsBasedOnEmpId/" + EmployeeId)
 $scope.employee = response[0];
     $scope.employee.DateOfBirth = new Date($scope.employee.DateOfBirth);
     $scope.employee.DateOfJoining = new Date($scope.employee.DateOfJoining);
+    $("#EditTrackModal").modal("hide");
 
 });
 
@@ -827,6 +829,7 @@ console.log(employee)
 $http.put(ApiUrlPrefix + 'addEmployeeStatusByManager', employee).success(function (data) {
 alert("Employee details updated successfully");
 $("#editEmployeeStatus").modal("hide");
+    $("#EditTrackModal").modal("hide");
 $http.get(ApiUrlPrefix + "fetchEmployeeMasterdetailsByManager/" + $scope.userinfodata.EmployeeId).success(function (data) {
 
 $scope.managerEmployeeList = data;
@@ -881,7 +884,7 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
     //console.log(data);
     alert("Project closed successfully");
 
-    
+
     $("#EditTrackModal").modal("hide");
     $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+UserId).success(function (data) {
     $scope.trackdata=data;
