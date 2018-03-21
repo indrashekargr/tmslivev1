@@ -108,7 +108,33 @@
                 },
                 "deprecated": false
             }
-        }, 
+        },
+
+        "/fetchfeedbacklist": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchfeedbacklist_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchfeedbacklist"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
 
         "/fetchAllReportingHeads": {
             "get": {
@@ -362,6 +388,32 @@
                         "type": "integer",
                         "format": "int32"
                     }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchfeedbacklist": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchfeedbacklist_getByUsername",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
                 ],
                 "responses": {
                     "200": {
@@ -1924,6 +1976,10 @@
                    
                 },
                 "Availability": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "buid": {
                     "format": "int32",
                     "type": "integer"
                 },

@@ -27,6 +27,13 @@ window.$scope = $scope;
         }
     }
 
+    //Fetch Feedback notification list
+    $scope.allfeedbackList = function (){
+        $http.get(ApiUrlPrefix + "fetchfeedbacklist").success(function(data){
+
+        })
+    }
+
    //Reset Button for HR Module
     $scope.reset  = function(){
         $http.get(ApiUrlPrefix + "fetchAllEmployeeDataByHR").success(function (data) {
@@ -267,20 +274,24 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
                 , "Details": bugdetail
             };
             $http.post(ApiUrlPrefix + 'addFeedback', newFeedback).then(function (response) {
-                if (response.data) {
+                //alert(response.data);
                     alert("Thank you for your valuable feedback...");
-                   // $location.path( "/home" );
-
+                    $location.path( "/home" );
+                   // $scope.AddFeedbackClear();
+                $scope.newFeedback = "";
                     $("#FeedbackModal").modal("hide");
                    $("#AddSkillModal").modal("hide");
-                }
+
             },function(error){
                 console.log(error);
             });
         }
     }
 
-
+   /* $scope.AddFeedbackClear = function () {
+        $scope.Type = "";
+        $scope.Details = "";
+    }*/
 
   // Add Employee Tracking Profile
   $scope.addTracking = function(a,b,c,d,e,ci,fn,ln) {
@@ -789,6 +800,7 @@ var employee = {
 "ModifiedBy":$scope.userinfodata.Username,
 //"Password":$scope.employee.Password,
 "Availability":$scope.employee.Availability,
+    "buid":$scope.employee.buid,
 "IsReportingHead":$scope.employee.IsReportingHead
 };
 

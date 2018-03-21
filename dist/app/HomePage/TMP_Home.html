@@ -1185,31 +1185,26 @@ Manager
 
 </div>
 </div>
-<div class="col-lg-4">
-<div class="form-group">
-<label>Business Unit
-<!--<span
-style="color:#3c8dbc;">*</span>-->
-</label>
-<!-- <select class="form-control" ng-model="employee.BuId" ng-change="buChange(employee.BuId)" ng-options="bu.Id as bu.buName for bu in bumaster">
-<option value="null">&#45;&#45;
-Select
-Status
-Master
-&#45;&#45;</option>
-</select>-->
-<input type="email" placeholder="Business Unit Name" ng-model="employee.BuName" class="form-control" disabled>
-</div>
-</div>
-<div class="col-lg-4">
-<div class="form-group">
-<label>Integra Experience
-(Months)
-<span
-style="color:#3c8dbc;"></span>
-</label>
-<input type="text" onkeypress="javascript:return isDecimalPt(event)" placeholder="Enter Integra Experience" ng-model="employee.integraExperience" class="form-control" readonly="true"> </div>
-</div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>Integra Experience
+                (Months)
+                <span
+                        style="color:#3c8dbc;"></span>
+            </label>
+            <input type="text" onkeypress="javascript:return isDecimalPt(event)" placeholder="Enter Integra Experience" ng-model="employee.integraExperience" class="form-control" readonly="true"> </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>Contact No.
+                <span
+                        style="color:#3c8dbc;">*</span>
+            </label>
+            <input id="tbNumbers" onkeypress="javascript:return isNumber(event)" minlength="8" maxlength="15" ng-model="employee.ContactNo" placeholder="Enter Contact No." class="form-control" readonly="true">
+            <!-- <input id="numbers" minlength="8" maxlength="15" id="ContactNo" name="ContactNo" placeholder="Enter Contact No." ng-model="employee.ContactNo" class="form-control"> -->
+        </div>
+    </div>
+
 
 <!-- <div class="col-lg-6">
 <div class="form-group">
@@ -1232,16 +1227,23 @@ style="color:#3c8dbc;">*</span>
 
 
 <div class="row">
-<div class="col-lg-4">
-<div class="form-group">
-<label>Contact No.
-<span
-style="color:#3c8dbc;">*</span>
-</label>
-<input id="tbNumbers" onkeypress="javascript:return isNumber(event)" minlength="8" maxlength="15" ng-model="employee.ContactNo" placeholder="Enter Contact No." class="form-control" readonly="true">
-<!-- <input id="numbers" minlength="8" maxlength="15" id="ContactNo" name="ContactNo" placeholder="Enter Contact No." ng-model="employee.ContactNo" class="form-control"> -->
-</div>
-</div>
+
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>Business Unit
+                <span
+                        style="color:#3c8dbc;">*</span>
+            </label>
+            <select class="form-control" ng-model="employee.buid" ng-change="buChange(employee.buid)" ng-options="bu.Id as bu.buName for bu in bumaster">
+                <option value="null">--
+                    Select
+                    Status
+                    Master
+                    --</option>
+            </select>
+            <!--<input type="email" placeholder="Business Unit Name" ng-model="employee.BuName" class="form-control" disabled>-->
+        </div>
+    </div>
 <div class="col-lg-4">
 <div class="form-group">
 <label>Role
@@ -1336,7 +1338,7 @@ style="color:#3c8dbc;">*</span>
 
 </div>
 <div class="text-center">
-<button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="updateEmployee(employee.EmployeeId,employee.RoleId,employee.PrimarySkill,employee.integraExperience,employee.IsReportingHead,employee.Availability)">Update</button>
+<button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="updateEmployee(employee.EmployeeId,employee.RoleId,employee.PrimarySkill,employee.integraExperience,employee.IsReportingHead,employee.Availability,employee.buid)">Update</button>
 
 <!--<button type="submit" class="mb-sm btn btn-warning btn-outline">Disengage</button> -->
 <!-- <button type="reset" class="mb-sm btn btn-danger btn-outline " data-dismiss="modal">Close</button> -->
@@ -1561,10 +1563,10 @@ Role
 </article>
     <article ng-if="!showInputsArticleWithInput">
     <article ng-if="userinfodata.RoleId==6">
-        <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMWY3MjNlOTEtZTgwYS00ZTQzLTlhNGItMDczODZhNTE3OGY3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiZmI1YTYyN2ItYzRjYy00M2FlLTliMTgtYjM5NjVhYjMyMjczIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
     </article>
         <article ng-if="userinfodata.RoleId==5">
-            <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMWY3MjNlOTEtZTgwYS00ZTQzLTlhNGItMDczODZhNTE3OGY3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiZmI1YTYyN2ItYzRjYy00M2FlLTliMTgtYjM5NjVhYjMyMjczIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
         </article>
 <article ng-if="userinfodata.RoleId==7 && userinfodata.BuId==1 ">
    <!-- <div ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 ">-->
@@ -1584,7 +1586,7 @@ Role
    <!-- <div ng-if="userinfodata.RoleId==7 && userinfodata.buid==4">-->
 
    <!-- </div>-->
-<div class="modal fade" id="FeedbackModal" ng-controller="feedbackctl" tabindex="-1" ng-if="!showInputsArticleWithInput" role="dialog" aria-labelledby="feedbackModalLabel">
+<div class="modal fade" id="FeedbackModal" tabindex="-1" ng-if="!showInputsArticleWithInput" role="dialog" aria-labelledby="feedbackModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content" style="width: 376px;height: 269px;margin-left: 15%;margin-top: 10%;">
 <div class="modal-header">
