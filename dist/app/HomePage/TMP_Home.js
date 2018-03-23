@@ -52,10 +52,10 @@ window.$scope = $scope;
 $scope.searchskill = function(q,r,s,t)
 {
     $scope.ratings = [{"RatingID" : 1},{"RatingID" : 2},{"RatingID" : 3},{"RatingID" : 4},{"RatingID" : 5}];
-    $scope.selected = false;
-    $scope.selectAll = function() {
+   // $scope.selected = false;
+   /* $scope.selectAll = function() {
         $scope.selectedValues = $scope.values;
-      }
+      }*/
 console.log(q+" "+r+" "+s+ " "+t);
 if(q== undefined && r== undefined && s== undefined && t== undefined){
 alert("Please select all the mandatory fields");
@@ -69,9 +69,9 @@ alert("Please select Skill");
 else if(s== null ||s== undefined|| s==""){
 alert("Please select Rating");
 } 
-else if(t== null ||t== undefined|| t==""){
+/*else if(t== null ||t== undefined|| t==""){
 alert("Please select Availability");
-}
+}*/
 /*else if(t== null || t== undefined||t==""){
 alert("Please select Availability");
 } */

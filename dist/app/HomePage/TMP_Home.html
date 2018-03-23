@@ -1,4 +1,11 @@
 <style>
+
+    div.ex1 {
+        width: 870px;
+        height: 550px;
+        overflow: scroll;
+    }
+
     table tbody, table thead
     {
         display: block;
@@ -7,16 +14,16 @@
     table tbody
     {
         overflow: auto;
-       /* height: 320px;*/
+      /*  height: 320px;*/
 
     }
     td
     {
-        /*width: 175px;*/
+        width: 150px;
     }
     th
     {
-       /* width: 175px;*/
+       width: 150px;
     }
 .form textarea {
 height: 220px;
@@ -125,7 +132,7 @@ style="color:#3c8dbc;">&nbsp;*</span></label>
 <select class="form-control" ng-model="rating">
 <option value="">--Select Rating--</option>
 <!-- <option >All</option> -->
-<!--  <select-all values="ratings"><option selected="">Select All</option></select-all> -->
+<option value="0">Select All</option>
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -188,27 +195,29 @@ Filter</button>
 <article ng-if="showInputsArticleWithInput">
     <div class="wrapper">
     <div id="wrap">
-        <table class="table table-bordered table-hover">
+        <table class="table  table-hover">
             <thead style="background: #ddd;">
             <tr style="border-bottom: 1px solid #eee;"  class="header">
-<th style="width:124px;">No.</th>
+<th>No.</th>
 <!--<th>Photo</th> -->
-<th style="width:126px;">Employee No.</th>
-<th style="width:144px;">Employee Name</th>
+<th >Employee No.</th>
+<th >Employee Name</th>
 <!-- <th>Designation</th> -->
 <!--  <th>Email</th> -->
-<th style="width:190px;">Contact Detail</th>
+<th style="
+    width: 16%;
+" >Contact Detail</th>
 
-<th style="width:150px;">Reporting Head</th>
+<th >Reporting Head</th>
 <!--<th>Prior Exp.</th>
 <th>Integra Exp.</th> -->
-<th style="width:115px;">Total Exp.</th>
-<th style="width:150px;">Resource Skills</th>
-<th style="width:136px;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==6">Last Modified</th>
+<th >Total Exp.</th>
+<th >Resource Skills</th>
+<th  ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==6">Last Modified</th>
 <!--<th>Availability</th> -->
 <!-- <th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3">Skills</th> -->
-<th style="width:140px" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
-<th  style="width:140px;"ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Track</th>
+<th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
+<th ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Track</th>
 </tr>
 </thead>
 <tbody style="height:320px;">
@@ -216,32 +225,32 @@ Filter</button>
 <tr style="
 border-bottom: 1px solid #eee;
 " ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 ||userinfodata.RoleId==6 " ng-repeat="user in filteredEmployee = (currentEmployeeList | filter : searchText) | orderBy:'EmployeeId'">
-<td style="width:150px;">{{$index+1}}</td>
+<td style="width:10%;">{{$index+1}}</td>
 <!--<td>
 <div class="media">
 <img src="assets/images/user.ico" alt="user" class="img-responsive img-circle"> </div>
 </td> -->
-<td style="width:150px;">{{user.EmployeeId}}</td>
-<td style="width:150px;">{{user.FirstName}}&nbsp;{{user.LastName}}</td>
+<td style="width:10%;">{{user.EmployeeId}}</td>
+<td style="width:10%;">{{user.FirstName}}&nbsp;{{user.LastName}}</td>
 <!--  <td>{{user.Designation}}</td> -->
 
-<td style="width:150px;"><i class="fa fa-phone" aria-hidden="true"></i>
+<td style="width:10%;"><i class="fa fa-phone" aria-hidden="true"></i>
 {{user.ContactNo}}</br><i class="fa fa-envelope" aria-hidden="true"></i>
 {{user.Email}}</td>
-<td style="width:150px;">{{user.reportingmanager}}</td>
+<td style="width:10%;">{{user.reportingmanager}}</td>
 <!-- <td>{{user.PriorExprience}}</td>
 <td>{{user.integraExperience}}</td> -->
-<td style="width:150px;">{{user.totalExperience}}</td>
-<td style="width:150px;">
+<td style="width:10%;">{{user.totalExperience}}</td>
+<td style="width:10%;">
 <a data-toggle="modal" ng-click="skillUpdate(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.RoleID)"
 title="view more skills" data-target="#ViewSkillsModal" data-whatever="@mdo">{{user.PrimarySkill}}</a>
 </td>
-<td style="width:150px;">{{user.ModifiedBy || user.CreatedBy}} </br> {{user.ModifiedDate || user.CreatedDate}}</td>
+<td style="width:10%;">{{user.ModifiedBy || user.CreatedBy}} </br> {{user.ModifiedDate || user.CreatedDate}}</td>
 <!--  <td ng-if="user.ModifiedBy==null && user.ModifiedDate==null || user.CreatedBy!=null &&  user.CreatedDate!=null">{{user.CreatedBy}} </br>-->  {{user.CreatedDate}}</td>
 
 <!--  <td ng-if="user.ModifiedBy!=null ||  user.ModifiedDate!=null ||  user.CreatedBy==null || user.CreatedDate==null">{{user.ModifiedBy}} </br> {{user.ModifiedDate}}</td> -->
 <!--<td>{{user.AvailabilityStatus}}</td> -->
-<td style="width:150px;">
+<td style="width:10%;text-align: right;">
 <a ng-if="userinfodata.RoleId==5" href="" data-toggle="modal" data-target=".bs-example-modal-lg"
 style="text-decoration: none;">
 <img src="assets/images/icons/edit icon.png" data-toggle="tooltip"
@@ -375,6 +384,7 @@ style="cursor:pointer;width: 30px;">
 </a>
 <h4 class="modal-title" id="exampleModalLabel">Skills for {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
 </div>
+    <div class="ex1">
 <div class="modal-body">
 <div class="col-md-12">
 <div class="box box-info ">
@@ -393,7 +403,7 @@ style="cursor:pointer;width: 30px;">
 <th>Action </th>-->
 </tr>
 </thead>
-<tbody ng-repeat="skill in skilldata">
+<tbody ng-repeat="skill in skilldata" style="overflow: auto;">
 <tr ng-if="skill">
 <td style="width:150px;">{{skill.categoryName}}</td>
 <td style="width:150px;">{{skill.skillName}}</td>
@@ -425,7 +435,7 @@ class="width_edit_icon" data-toggle="tooltip" data-placement="top">
 </div>
 </div>
 </div>
-</div>
+</div></div>
 <div class="modal-footer" style="text-align: center;">
 <button  type="reset" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal">Close</button>
 </div>
