@@ -1,20 +1,32 @@
 <style>
-/* your existing container */
-/*
-text box css strats
-*/
+    table tbody, table thead
+    {
+        display: block;
+    }
+
+    table tbody
+    {
+        overflow: auto;
+       /* height: 320px;*/
+
+    }
+    td
+    {
+        /*width: 175px;*/
+    }
+    th
+    {
+       /* width: 175px;*/
+    }
 .form textarea {
 height: 220px;
 width: 342px;
 }
-/* text box css ends*/
 
 #wrap {
-overflow: auto;
-height: 350px;
+/*overflow: auto;
+height: 350px;*/
 }
-
-/* css for demo */
 
 td {
 background-color: #fff;
@@ -174,60 +186,62 @@ Filter</button>
 
 
 <article ng-if="showInputsArticleWithInput">
-<div id="wrap">
-<table id="" class="table table-bordered table-hover" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==4 || userinfodata.RoleId==6 || userinfodata.RoleId==7">
-<thead class="theadbackgroud">
-<tr style="border-bottom: 1px solid #eee;">
-<th>No.</th>
+    <div class="wrapper">
+    <div id="wrap">
+        <table class="table table-bordered table-hover">
+            <thead style="background: #ddd;">
+            <tr style="border-bottom: 1px solid #eee;"  class="header">
+<th style="width:124px;">No.</th>
 <!--<th>Photo</th> -->
-<th>Employee No.</th>
-<th>Employee Name</th>
+<th style="width:126px;">Employee No.</th>
+<th style="width:144px;">Employee Name</th>
 <!-- <th>Designation</th> -->
 <!--  <th>Email</th> -->
-<th >Contact Detail</th>
+<th style="width:190px;">Contact Detail</th>
 
-<th>Reporting Head</th>
+<th style="width:150px;">Reporting Head</th>
 <!--<th>Prior Exp.</th>
 <th>Integra Exp.</th> -->
-<th>Total Exp.</th>
-<th>Resource Skills</th>
-<th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==6">Last Modified</th>
+<th style="width:115px;">Total Exp.</th>
+<th style="width:150px;">Resource Skills</th>
+<th style="width:136px;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==6">Last Modified</th>
 <!--<th>Availability</th> -->
 <!-- <th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3">Skills</th> -->
-<th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
-<th ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Track</th>
+<th style="width:140px" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
+<th  style="width:140px;"ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Track</th>
 </tr>
 </thead>
-<tbody>
+<tbody style="height:320px;">
+
 <tr style="
 border-bottom: 1px solid #eee;
 " ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 ||userinfodata.RoleId==6 " ng-repeat="user in filteredEmployee = (currentEmployeeList | filter : searchText) | orderBy:'EmployeeId'">
-<td>{{$index+1}}</td>
+<td style="width:150px;">{{$index+1}}</td>
 <!--<td>
 <div class="media">
 <img src="assets/images/user.ico" alt="user" class="img-responsive img-circle"> </div>
 </td> -->
-<td>{{user.EmployeeId}}</td>
-<td>{{user.FirstName}}&nbsp;{{user.LastName}}</td>
+<td style="width:150px;">{{user.EmployeeId}}</td>
+<td style="width:150px;">{{user.FirstName}}&nbsp;{{user.LastName}}</td>
 <!--  <td>{{user.Designation}}</td> -->
 
-<td><i class="fa fa-phone" aria-hidden="true"></i>
+<td style="width:150px;"><i class="fa fa-phone" aria-hidden="true"></i>
 {{user.ContactNo}}</br><i class="fa fa-envelope" aria-hidden="true"></i>
 {{user.Email}}</td>
-<td>{{user.reportingmanager}}</td>
+<td style="width:150px;">{{user.reportingmanager}}</td>
 <!-- <td>{{user.PriorExprience}}</td>
 <td>{{user.integraExperience}}</td> -->
-<td>{{user.totalExperience}}</td>
-<td>
+<td style="width:150px;">{{user.totalExperience}}</td>
+<td style="width:150px;">
 <a data-toggle="modal" ng-click="skillUpdate(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.RoleID)"
 title="view more skills" data-target="#ViewSkillsModal" data-whatever="@mdo">{{user.PrimarySkill}}</a>
 </td>
-<td >{{user.ModifiedBy || user.CreatedBy}} </br> {{user.ModifiedDate || user.CreatedDate}}</td>
+<td style="width:150px;">{{user.ModifiedBy || user.CreatedBy}} </br> {{user.ModifiedDate || user.CreatedDate}}</td>
 <!--  <td ng-if="user.ModifiedBy==null && user.ModifiedDate==null || user.CreatedBy!=null &&  user.CreatedDate!=null">{{user.CreatedBy}} </br>-->  {{user.CreatedDate}}</td>
 
 <!--  <td ng-if="user.ModifiedBy!=null ||  user.ModifiedDate!=null ||  user.CreatedBy==null || user.CreatedDate==null">{{user.ModifiedBy}} </br> {{user.ModifiedDate}}</td> -->
 <!--<td>{{user.AvailabilityStatus}}</td> -->
-<td>
+<td style="width:150px;">
 <a ng-if="userinfodata.RoleId==5" href="" data-toggle="modal" data-target=".bs-example-modal-lg"
 style="text-decoration: none;">
 <img src="assets/images/icons/edit icon.png" data-toggle="tooltip"
@@ -254,12 +268,12 @@ data-toggle="tooltip" data-placement="top" title="Delete Profile">
 data-target="#ViewSkillsModal" data-whatever="@mdo">View Skills</a> -->
 </td>
 </tr>
+<tr ng-show="filteredEmployee.length == 0"
+    style="border:1px solid #e7e7e7;">
+    <td colspan="15" style="font-weight: bold;margin-left: 41%;position: absolute;">No Data found</td>
+</tr>
 </tbody>
 <tbody>
-<tr ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==3 || userinfodata.RoleId==6" ng-show="filteredEmployee.length == 0"
-style="border:1px solid #e7e7e7;">
-<td colspan="15" style="font-weight: bold;">No Data found</td>
-</tr>
 </tbody>
 <tbody ng-if="userinfodata.RoleId==3" ng-repeat="user in managerEmployeeList | filter:searchText track by $index" style="border:1px solid #e7e7e7;">
 <tr>
@@ -303,11 +317,12 @@ title="Tracking Profile" aria-hidden="true"></i>
 </i>&nbsp; &nbsp; &nbsp;</a> -->
 </td>
 </tr>
+<tr ng-if="userinfodata.RoleId==7" ng-show="filteredEmployee.length == 0"
+    style="border:1px solid #e7e7e7;">
+    <td colspan="15" style="font-weight: bold;">No Data found</td>
+</tr>
 </tbody>
-    <tr ng-if="userinfodata.RoleId==7" ng-show="filteredEmployee.length == 0"
-        style="border:1px solid #e7e7e7;">
-        <td colspan="15" style="font-weight: bold;">No Data found</td>
-    </tr>
+
    <!-- buEmployeeList
     ng-repeat="user in filteredEmployee = (currentEmployeeList | filter : searchText) | orderBy:'EmployeeId'"-->
     <tbody ng-if="userinfodata.RoleId==7"  ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'" style="border:1px solid #e7e7e7;">
@@ -344,7 +359,7 @@ title="Tracking Profile" aria-hidden="true"></i>
 </tbody>
     </tr>
 </table>
-</div>
+        </div></div>
 
 <div class="modal fade" id="ViewSkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static"
 data-keyboard="false">
@@ -368,29 +383,29 @@ style="cursor:pointer;width: 30px;">
 <table class="table no-margin text-center">
 <thead class="theadbackgroud">
 <tr style="background: #061743;">
-<th style="color: white;">Category Name</th>
-<th style="color: white;">Skill Name</th>
-<th style="color: white;">Rating</th>
-<th style="color: white;">Modified By</th>
-<th style="color: white;">Modified On</th>
-<th style="color: white;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
+<th style="color: white; width:150px;">Category Name</th>
+<th style="color: white; width:150px;">Skill Name</th>
+<th style="color: white; width:150px;">Rating</th>
+<th style="color: white; width:150px;">Modified By</th>
+<th style="color: white; width:150px;">Modified On</th>
+<th style="color: white; width:150px;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
 <!--   <th>Modified by </th>
 <th>Action </th>-->
 </tr>
 </thead>
 <tbody ng-repeat="skill in skilldata">
 <tr ng-if="skill">
-<td>{{skill.categoryName}}</td>
-<td>{{skill.skillName}}</td>
-<td>{{skill.rating}}
+<td style="width:150px;">{{skill.categoryName}}</td>
+<td style="width:150px;">{{skill.skillName}}</td>
+<td style="width:150px;">{{skill.rating}}
 </td>
-<td ng-if="skill.ModifiedBy==null">{{skill.CreatedBy}}</td>
-<th ng-if="skill.ModifiedBy!=null">{{skill.ModifiedBy}}</th>
-<td ng-if="skill.ModifiedDate==null">{{skill.CreatedDate}}</td>
-<th ng-if="skill.ModifiedDate!=null">{{skill.ModifiedDate}}</th>
+<td style="width:150px;" ng-if="skill.ModifiedBy==null">{{skill.CreatedBy}}</td>
+<th style="width:150px;" ng-if="skill.ModifiedBy!=null">{{skill.ModifiedBy}}</th>
+<td style="width:150px;" ng-if="skill.ModifiedDate==null">{{skill.CreatedDate}}</td>
+<th style="width:150px;" ng-if="skill.ModifiedDate!=null">{{skill.ModifiedDate}}</th>
 <!--<td>{{skill.ModifiedBy}}</td>
 <th>{{skill.ModifiedDate}}</th>-->
-<td ng-if="skill.categoryName">
+<td style="width:150px;" ng-if="skill.categoryName">
 <a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7" ng-click="updateskill(skill.categoryName,skill.skillName,skill.rating,skill.EmployeeSkillId,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
 data-toggle="modal" data-target="#EditSkillModal" data-whatever="@mdo">
 <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
@@ -558,17 +573,17 @@ padding-left: 4%;
 <table class="table no-margin text-center">
 <thead>
 <tr style="background: #ebecec;">
-<th>Category Name</th>
-<th>Skill Name</th>
-<th>Rating</th>
+<th style="width:150px;">Category Name</th>
+<th style="width:150px;">Skill Name</th>
+<th style="width:150px;">Rating</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>{{skill.categoryName}}</td>
-<td>{{skill.skillName}}</td>
+<td style="width:150px;">{{skill.categoryName}}</td>
+<td style="width:150px;">{{skill.skillName}}</td>
 
-<td>
+<td style="width:150px;">
 <select class="form-control" ng-model="skill.Rating" ng-options=" r.RatingID  as r.RatingID  for r in ratings">
 <option value="">--- Rating ---</option>
 
@@ -738,37 +753,37 @@ background-color: #393350;
 ">
 
 
-<th style="
+<th style="width:150px;
 color: white;
 font-size: 110%;
 border-color: #393350;
 border-style: double;
 ">Company</th>
-<th style="
+<th style="width:150px;
 color: white;
 font-size: 110%;
 border-color: #393350;
 border-style: double;
 ">Project</th>
-<th style="
+<th style="width:150px;
 color: white;
 font-size: 110%;
 border-color: #393350;
 border-style: double;
 ">Type</th>
-<th style="
+<th style="width:150px;
 color: white;
 font-size: 110%;
 border-color: #393350;
 border-style: double;
 ">From</th>
-<th style="
+<th style="width:150px;
 color: white;
 font-size: 110%;
 border-color: #393350;
 border-style: double;
 ">To</th>
-<th style="
+<th style="width:150px;
 color: white;
 font-size: 110%;
 border-color: #393350;
@@ -779,23 +794,23 @@ border-style: double;
 <tbody ng-repeat="track in trackdata">
 <!--Made it easier, so no more redundant copypasta in other pages-->
 <tr>
-<td style="
+<td style="width:150px;
 border-color: #393350;
 border-style: double;  ">{{track.CompanyName}}</td>
 
-<td style="
+<td style="width:150px;
 border-color: #393350;
 border-style: double;  ">{{track.ProjectName}}</td>
-<td style="
+<td style="width:150px;
 border-color: #393350;
 border-style: double;  ">{{track.type}}</td>
-<td style="
+<td style="width:150px;
 border-color: #393350;
 border-style: double;  ">{{track.FromDate}}</td>
-<td style="
+<td style="width:150px;
 border-color: #393350;
 border-style: double;  ">{{track.ToDate}}</td>
-<td style="
+<td style="width:150px;
 border-color: #393350;
 border-style: double;  ">
 <!--<td ng-if="skill.categoryName"> -->
@@ -1568,16 +1583,7 @@ Role
         <!-- <div ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 ">-->
         <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiODZhODE3MzMtNjgzZC00MzgyLWFmMDMtNmZiYzU0MmE3YzUyIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
     </article>
-
-
     </article>
-  <!--  </div>-->
-   <!-- <div ng-if="userinfodata.RoleId==7 && userinfodata.buid==1">-->
-
-  <!--  </div>-->
-   <!-- <div ng-if="userinfodata.RoleId==7 && userinfodata.buid==4">-->
-
-   <!-- </div>-->
 <div class="modal fade" id="FeedbackModal" tabindex="-1" ng-if="!showInputsArticleWithInput" role="dialog" aria-labelledby="feedbackModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content" style="width: 376px;height: 269px;margin-left: 15%;margin-top: 10%;">
@@ -1643,11 +1649,6 @@ padding-left: 4%;
 <!-- START table-responsive-->
 
 <script type="text/javascript">
-document.getElementById("wrap").addEventListener("scroll", function () {
-var translate = "translate(0," + this.scrollTop + "px)";
-this.querySelector("thead").style.transform = translate;
-});
-
 function isNumber(evt) {
 var iKeyCode = (evt.which) ? evt.which : evt.keyCode
 if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
@@ -1703,3 +1704,4 @@ else { return true; }
 }
 
 </script>
+
