@@ -19,7 +19,7 @@ module.exports = {
              * Replace this by actual data for the api.
              */
             Mockgen().responses({
-                path: '/searchEmployeeResourceSkillsAllRatingForHR/{CategoryId}/{SkillId}/{Rating}/{Availability}',
+                path: '/searchEmployeeResourceSkillsAllRatingAndStatusForHR/{CategoryId}/{SkillId}/{Rating}/{Availability}',
                 operation: 'get',
                 response: '200'
             }, callback);

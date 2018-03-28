@@ -130,9 +130,9 @@ style="color:#3c8dbc;">&nbsp;*</span></label>
 <label>Rating:<span
 style="color:#3c8dbc;">&nbsp;*</span></label>
 <select class="form-control" ng-model="rating">
-<option value="">--Select Rating--</option>
+<option value="">&#45;&#45;Select All&#45;&#45;</option>
 <!-- <option >All</option> -->
-<option value="0">Select All</option>
+<!--<option value="">Select All</option>-->
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -143,10 +143,10 @@ style="color:#3c8dbc;">&nbsp;*</span></label>
 </div>
 <div class="col-lg-2">
 <div class="form-group">
-<label>Availability:<span
+<label>Status:<span
 style="color:#3c8dbc;">&nbsp;*</span></label>
 <select class="form-control" ng-model="Availability" ng-options="avail.Id as avail.StatusName for avail in statuslist">
-<option value="">--Select Availability--</option>
+    <option value="">&#45;&#45;Select All&#45;&#45;</option>
 </select>
 </div>
 </div>
@@ -368,13 +368,14 @@ title="Tracking Profile" aria-hidden="true"></i>
 </tbody>
     </tr>
 </table>
-        </div></div>
+        <input type="text" placeholder="Search" ng-model='searchText' class="input-md form-control" style="
+padding: 0px 0px 0px 0px; margin-top:2%; width: 350px;"></div></div>
 
 <div class="modal fade" id="ViewSkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static"
 data-keyboard="false">
 <div class="modal-dialog modal-lg" role="document">
 <div class="modal-content">
-<div class="modal-header" style="background:#fff; color:rgb(0, 0, 0);text-align: center;">
+<div class="modal-header" style="background:#fff;color:rgb(0, 0, 0);text-align: center;border-bottom: 0;">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 <span aria-hidden="true">&times;</span>
 </button>
@@ -383,27 +384,38 @@ data-keyboard="false">
 style="cursor:pointer;width: 30px;">
 </a>
 <h4 class="modal-title" id="exampleModalLabel">Skills for {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
+<table class="table no-margin text-center" style="
+    margin-top: 3%;
+    margin-bottom: -1%;
+">
+    <thead class="theadbackgroud" style="
+    background: white;
+">
+    <tr style="background: #061743;">
+        <th style="color: white; width:140px;">Category Name</th>
+        <th style="color: white; width:140px;">Skill Name</th>
+        <th style="color: white; width:140px;">Rating</th>
+        <th style="color: white; width:140px;">Modified By</th>
+        <th style="color: white; width:140px;">Modified On</th>
+        <th style="color: white; width:140px;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
+        <!--   <th>Modified by </th>
+        <th>Action </th>-->
+    </tr>
+    </thead>
+</table>
 </div>
     <div class="ex1">
 <div class="modal-body">
-<div class="col-md-12">
-<div class="box box-info ">
+<div class="col-md-12" style="
+    margin-top: -3%;
+">
+<div class="box box-info">
 <div class="box-body EMS_PanelHeading">
 <div class="table-responsive">
 <table class="table no-margin text-center">
-<thead class="theadbackgroud">
-<tr style="background: #061743;">
-<th style="color: white; width:150px;">Category Name</th>
-<th style="color: white; width:150px;">Skill Name</th>
-<th style="color: white; width:150px;">Rating</th>
-<th style="color: white; width:150px;">Modified By</th>
-<th style="color: white; width:150px;">Modified On</th>
-<th style="color: white; width:150px;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
-<!--   <th>Modified by </th>
-<th>Action </th>-->
-</tr>
-</thead>
+
 <tbody ng-repeat="skill in skilldata" style="overflow: auto;">
+
 <tr ng-if="skill">
 <td style="width:150px;">{{skill.categoryName}}</td>
 <td style="width:150px;">{{skill.skillName}}</td>
@@ -623,16 +635,9 @@ padding-left: 4%;
 <div class="panel-footer">
 
 <div class="input-group">
-<input type="text" placeholder="Search" ng-model='searchText' class="input-md form-control" style="
-padding: 0px 0px 0px 0px; margin-top:2%; width: 350px;">
+<!--<input type="text" placeholder="Search" ng-model='searchText' class="input-md form-control" style="
+padding: 0px 0px 0px 0px; margin-top:2%; width: 350px;">-->
 <span class="input-group-btn">
-<!--<button type="button" class="btn btn-sm btn-default">Search</button> -->
-<!--  </span>
-
-</div>
-</div> -->
-
-
 </section>
 
 </div>
@@ -1222,7 +1227,15 @@ Manager
         </div>
     </div>
 
-
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label>Integra Experience
+                (Months)
+                <span
+                        style="color:#3c8dbc;"></span>
+            </label>
+            <input type="text" onkeypress="javascript:return isDecimalPt(event)" placeholder="Enter Integra Experience" ng-model="employee.integraExperience" class="form-control" readonly="true"> </div>
+    </div>
 <!-- <div class="col-lg-6">
 <div class="form-group">
 <label>Availability
@@ -1296,21 +1309,9 @@ Skill
 </div>
 </div>
 <div class="row">
-<!--<div class="col-lg-6">
-<div class="form-group">
-<label>Date of Leaving
-<span
-style="color:#3c8dbc;"></span>
-</label>
-
-<input type="date" id="dateInput" id="input" ng-model="employee.DateOfLeaving" class="form-control datepick"> </div>
-
-<<input type="text" placeholder="2017/11/22" class="form-control" ng-model="employee.DateOfLeaving"> </div>
-</div> -->
-
 <div class="col-lg-4">
 <div class="form-group">
-<label>Availability
+<label>Status
 <span
 style="color:#3c8dbc;">*</span>
 </label>
@@ -1321,11 +1322,8 @@ Status
 Master
 --</option>
 </select>
-
 </div>
 </div>
-
-
 <div class="col-lg-4">
 <div class="form-group">
 <label>Is Reporting

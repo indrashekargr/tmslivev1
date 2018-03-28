@@ -57,7 +57,13 @@ $scope.searchskill = function(q,r,s,t)
         $scope.selectedValues = $scope.values;
       }*/
 console.log(q+" "+r+" "+s+ " "+t);
-if(q== undefined && r== undefined && s== undefined && t== undefined){
+    if(s== null ||s== undefined|| s=="") {
+        s="0";
+    }
+    if(t== null ||t== undefined|| t=="") {
+        t="0";
+    }
+if(q== undefined && r== undefined){
 alert("Please select all the mandatory fields");
 }
 else if(q== null || q== undefined||q==""){
@@ -66,9 +72,9 @@ alert("Please select Category");
 else if(r== null || r== undefined||r==""){
 alert("Please select Skill"); 
 }
-else if(s== null ||s== undefined|| s==""){
-alert("Please select Rating");
-} 
+/*else if(s== null ||s== undefined|| s=="") {
+    s="0";
+}*/
 /*else if(t== null ||t== undefined|| t==""){
 alert("Please select Availability");
 }*/
@@ -77,17 +83,52 @@ alert("Please select Availability");
 } */
 else{
 
-//$http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForHR/CategoryId='+q + "/SkillId="+ r + "/Rating=" + s + "/AvailabilityStatus=" + t).success(function (data) {
-$http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForHR/CategoryId='+q + "/SkillId="+ r + "/Rating=" +s +"/Availability="+t).success(function (data) {
-//$scope.employeedata=data;
-$scope.currentEmployeeList = data;
-//$scope.managerEmployeeList = data;
+    if(q != null && r !=null &&  s != "0"  && t !=null){
+        $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForHR/CategoryId='+q + "/SkillId="+ r + "/Rating=" +s +"/Availability="+t).success(function (data) {
+            $scope.currentEmployeeList = data;
+        },function(data){
+            console.log(data);
+        },function(error){
+            console.log(error);
+        });
+    }
 
-},function(data){
-console.log(data);
-},function(error){
-console.log(error);
-});
+    if(q !=null  && r !=null && s == "0" && t !=null){
+        console.log($scope.rating);
+        $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllRatingForHR/CategoryId='+q + "/SkillId="+ r + "/Rating= " +s +"/Availability="+t).success(function (data) {
+            $scope.currentEmployeeList = data;
+
+        },function(data){
+            console.log(data);
+        },function(error){
+            console.log(error);
+        });
+    }
+
+    if(q !=null  && r !=null && s !=null && t =="0"){
+        console.log($scope.rating);
+        $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllStatusForHR/CategoryId='+q + "/SkillId="+ r + "/Rating= " +s +"/Availability="+t).success(function (data) {
+            $scope.currentEmployeeList = data;
+
+        },function(data){
+            console.log(data);
+        },function(error){
+            console.log(error);
+        });
+    }
+
+    if(q !=null  && r !=null && s == "0" && t =="0"){
+        console.log(s);
+        console.log(t);
+        $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllRatingAndStatusForHR/CategoryId='+q + "/SkillId="+ r + "/Rating= " +s +"/Availability="+t).success(function (data) {
+            $scope.currentEmployeeList = data;
+
+        },function(data){
+            console.log(data);
+        },function(error){
+            console.log(error);
+        });
+    }
 
 /*if( $scope.ratings){
     $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllRatingForHR/CategoryId='+q + "/SkillId="+ r  +"/Availability="+t).success(function (data) {

@@ -612,7 +612,7 @@
 
       
 
-        "/searchEmployeeResourceSkillsAllRatingForHR/CategoryId={CategoryId}/SkillId={SkillId}/Availability={Availability}": {
+        "/searchEmployeeResourceSkillsAllRatingForHR/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}": {
             "get": {
                 "tags": [
                     "TMS Employee Details"
@@ -638,7 +638,131 @@
                         "type": "integer",
                         "format": "int32"
                     },
+
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
                   
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/searchEmployeeResourceSkillsAllStatusForHR/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsAllStatusForHR_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/searchEmployeeResourceSkillsAllRatingAndStatusForHR/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsAllRatingAndStatusForHR_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
                     {
                         "name": "Availability",
                         "in": "path",

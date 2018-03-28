@@ -22,6 +22,8 @@ var searchEmployeeResourceSkillsForManager = require('./lib/searchEmployeeResour
 var searchEmployeeResourceSkillsAllRatingForHR = require('./lib/searchEmployeeResourceSkillsAllRatingForHR');
 var searchEmployeeResourceSkillsForBU = require('./lib/searchEmployeeResourceSkillsForBU');
 var fetchemployeetrackingformanager = require('./lib/fetchemployeetrackingformanager');
+var searchEmployeeResourceSkillsAllRatingAndStatusForHR = require('./lib/searchEmployeeResourceSkillsAllRatingAndStatusForHR');
+var searchEmployeeResourceSkillsAllStatusForHR = require('./lib/searchEmployeeResourceSkillsAllStatusForHR');
 
 fs.existsSync = fs.existsSync || require('path').existsSync;
 
@@ -39,9 +41,17 @@ app.get('/searchEmployeeResourceSkillsForHR/CategoryId=:CategoryId/SkillId=:Skil
     next();
     });
 
-app.get('/searchEmployeeResourceSkillsAllRatingForHR/CategoryId=:CategoryId/SkillId=:SkillId/Availability=:Availability', searchEmployeeResourceSkillsAllRatingForHR.searchEmployeeResourceSkillsAllRatingForHR, function(req, res, next){
-        next();
-        });
+app.get('/searchEmployeeResourceSkillsAllRatingForHR/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability', searchEmployeeResourceSkillsAllRatingForHR.searchEmployeeResourceSkillsAllRatingForHR, function(req, res, next){
+    next();
+});
+
+app.get('/searchEmployeeResourceSkillsAllStatusForHR/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability', searchEmployeeResourceSkillsAllStatusForHR.searchEmployeeResourceSkillsAllStatusForHR, function(req, res, next){
+    next();
+});
+
+app.get('/searchEmployeeResourceSkillsAllRatingAndStatusForHR/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability', searchEmployeeResourceSkillsAllRatingAndStatusForHR.searchEmployeeResourceSkillsAllRatingAndStatusForHR, function(req, res, next){
+    next();
+});
 app.get('/searchEmployeeResourceSkillsForManager/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability/ReportingManager=:ReportingManager', searchEmployeeResourceSkillsForManager.searchEmployeeResourceSkillsForManager, function(req, res, next){
     next();
     });
