@@ -2,8 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8df1417e-751c-4ec7-91de-9dc86be1e44f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/assets/images/icons/home icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/deleteSkillCategoryByAdmin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/deleteStatusByAdmin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/deleteSubSkillCategoryByAdmin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/handlers/deleteSkillCategoryByAdmin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/handlers/deleteStatusByAdmin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/handlers/deleteSubSkillCategoryByAdmin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/deleteSkillCategoryByAdmin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/deleteStatusByAdmin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/deleteSubSkillCategoryByAdmin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/swagger.json" afterPath="$PROJECT_DIR$/config/swagger.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" afterPath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" afterPath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/Partials/TMP_LeftSidebar.html" afterPath="$PROJECT_DIR$/dist/app/Partials/TMP_LeftSidebar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/Partials/TMP_footer.html" afterPath="$PROJECT_DIR$/dist/app/Partials/TMP_footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js" afterPath="$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html" afterPath="$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/StatusMaster/statusmaster.html" afterPath="$PROJECT_DIR$/dist/app/StatusMaster/statusmaster.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/StatusMaster/statusmaster.js" afterPath="$PROJECT_DIR$/dist/app/StatusMaster/statusmaster.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/TMP_Route.js" afterPath="$PROJECT_DIR$/dist/app/TMP_Route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/assets/css/app.css" afterPath="$PROJECT_DIR$/dist/assets/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/assets/css/custom.css" afterPath="$PROJECT_DIR$/dist/assets/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers/upadatestatusmasterbyadmin.js" afterPath="$PROJECT_DIR$/handlers/upadatestatusmasterbyadmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" afterPath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fetchskillslist.js" afterPath="$PROJECT_DIR$/lib/fetchskillslist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js" afterPath="$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,12 +45,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TMP_SkillMaster.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="146" column="26" lean-forward="true" selection-start-line="146" selection-start-column="26" selection-end-line="146" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TMP_Home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="378" column="22" lean-forward="true" selection-start-line="378" selection-start-column="22" selection-end-line="378" selection-end-column="22" />
+            <state relative-caret-position="485">
+              <caret line="1588" column="14" lean-forward="true" selection-start-line="1588" selection-start-column="14" selection-end-line="1588" selection-end-column="14" />
               <folding>
+                <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#3;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -31,7 +72,7 @@
                 <element signature="n#style#0;n#div#1;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#footer#0;n#div#1;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#footer#0;n#div#1;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#14829#14835#1" expanded="true" />
+                <element signature="e#15016#15022#1" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -52,8 +93,8 @@
                 <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#18077#18083#0" expanded="true" />
-                <element signature="e#18083#18089#0" expanded="true" />
+                <element signature="e#18195#18201#0" expanded="true" />
+                <element signature="e#18201#18207#0" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#2;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#6;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -61,41 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TMP_footer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_footer.html">
+      <file leaf-file-name="updateskillcategoryforadmin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/updateskillcategoryforadmin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-408">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employeeRepository.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/employeeRepository.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="1141" lean-forward="false" selection-start-line="18" selection-start-column="1113" selection-end-line="18" selection-end-column="1141" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchEmployeeResourceSkillsForHR.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForHR.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="321">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,38 +115,81 @@
       <file leaf-file-name="TMP_Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+            <state relative-caret-position="85">
+              <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchEmployeeResourceSkillsAllRatingForHR.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingForHR.js">
+      <file leaf-file-name="TMP_Skillmaster.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="1378" lean-forward="false" selection-start-line="10" selection-start-column="1378" selection-end-line="10" selection-end-column="1378" />
+            <state relative-caret-position="-425">
+              <caret line="206" column="113" lean-forward="false" selection-start-line="206" selection-start-column="103" selection-end-line="206" selection-end-column="113" />
+              <folding>
+                <element signature="n#style#0;n#h5#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1752#1758#0" expanded="true" />
+                <element signature="e#1758#1764#0" expanded="true" />
+                <element signature="e#1764#1770#0" expanded="true" />
+                <element signature="e#1770#1776#0" expanded="true" />
+                <element signature="e#1776#1782#0" expanded="true" />
+                <element signature="e#2167#2173#1" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="e#3029#3035#1" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swagger.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/swagger.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="1681" column="63" lean-forward="false" selection-start-line="1681" selection-start-column="63" selection-end-line="1681" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchEmployeeResourceSkillsAllRatingAndStatusForHR.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingAndStatusForHR.js">
+      <file leaf-file-name="fetchEmployeeMasterDetailsBasedOnUsername.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1416" lean-forward="false" selection-start-line="7" selection-start-column="1416" selection-end-line="7" selection-end-column="1416" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchEmployeeResourceSkillsAllStatusForHR.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllStatusForHR.js">
+      <file leaf-file-name="updatesubskillcategoryforadmin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="1415" lean-forward="false" selection-start-line="10" selection-start-column="1415" selection-end-line="10" selection-end-column="1415" />
+            <state relative-caret-position="921">
+              <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addskillcategoryforadmin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/addskillcategoryforadmin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -145,20 +199,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updateEmployeeDataByHR</find>
-      <find>AddTrakingModal</find>
-      <find>skillmasterlist</find>
-      <find>var pool = mysql.createPool({</find>
-      <find>trackdata[0].addAction</find>
-      <find>!track.Action</find>
-      <find>clearTrack()</find>
-      <find>track.Action</find>
-      <find>Tracking</find>
-      <find>employee</find>
-      <find>Dashboard</find>
-      <find>addEmployeeResourceSkillsByHR</find>
-      <find>buEmployeeList</find>
-      <find>fetchAllEmployeeDataByHR</find>
       <find>fetchEmployeeMasterDetailsBasedOnBuId</find>
       <find>editEmployeeStatus</find>
       <find>EditTrackModal</find>
@@ -166,7 +206,6 @@
       <find>FeedbackModal</find>
       <find>category1</find>
       <find>updateEmployee</find>
-      <find>skillUpdate</find>
       <find>editEmployee</find>
       <find>table-ext-1</find>
       <find>statuslist</find>
@@ -175,6 +214,21 @@
       <find>searchEmployeeResourceSkillsAllRatingForHR</find>
       <find>content-wrapper</find>
       <find>placeholder=&quot;Search&quot;</find>
+      <find>EmployeeList</find>
+      <find>sidebar</find>
+      <find>aside-inner</find>
+      <find>deleteResourceskills</find>
+      <find>deleteEmployeeResourceSkillsByHR</find>
+      <find>skillUpdate</find>
+      <find>deleteskills</find>
+      <find>addEmployeeSkills</find>
+      <find>User</find>
+      <find>deleteSkillCategoryByAdmin</find>
+      <find>deleteSkillCategory</find>
+      <find>getLoggedInUserInfo</find>
+      <find>deleteCategory</find>
+      <find>addSubCategory</find>
+      <find>updateSubCategory</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -187,33 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/skillmasterlist.js" />
-        <option value="$PROJECT_DIR$/lib/upadateemployeetracking.js" />
-        <option value="$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js" />
-        <option value="$PROJECT_DIR$/lib/updateEmployeeResourceSkillsByHR.js" />
-        <option value="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" />
-        <option value="$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js" />
-        <option value="$PROJECT_DIR$/lib/viewSelfEmployeeResourceSkills.js" />
-        <option value="$PROJECT_DIR$/lib/fetchemployeetracking.js" />
-        <option value="$PROJECT_DIR$/lib/addtrackingemployee.js" />
-        <option value="$PROJECT_DIR$/dist/app/Partials/TMP_Header.html" />
-        <option value="$PROJECT_DIR$/lib/addFeedback.js" />
-        <option value="$PROJECT_DIR$/lib/employeeRepository.js" />
-        <option value="$PROJECT_DIR$/dist/app/profile/TMP_P.js" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnBuId.js" />
-        <option value="vm:718" />
-        <option value="$PROJECT_DIR$/lib/login.js" />
-        <option value="$PROJECT_DIR$/dist/app/TMP_Route.js" />
-        <option value="$PROJECT_DIR$/dist/app/Feedback/TMP_feedback.js" />
-        <option value="$PROJECT_DIR$/dist/app/Feedback/TMP_feedback.html" />
-        <option value="$PROJECT_DIR$/lib/feedbacklist.js" />
-        <option value="$PROJECT_DIR$/handlers/fetchfeedbacklist/{username}.js" />
-        <option value="$PROJECT_DIR$/data/fetchfeedbacklist/{id}.js" />
-        <option value="$PROJECT_DIR$/handlers/fetchfeedbacklist.js" />
-        <option value="$PROJECT_DIR$/data/fetchfeedbacklist.js" />
-        <option value="$PROJECT_DIR$/lib/fetchfeedbacklist.js" />
-        <option value="$PROJECT_DIR$/dist/app/profile/TMP_profile.html" />
         <option value="$PROJECT_DIR$/lib/updateEmployeeDataByHR.js" />
         <option value="$PROJECT_DIR$/handlers/updateEmployeeDataByHR.js" />
         <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnEmpId.js" />
@@ -228,15 +255,42 @@
         <option value="$PROJECT_DIR$/lib/fetchstatusmasterlist.js" />
         <option value="$PROJECT_DIR$/handlers/searchEmployeeResourceSkillsAllStatusForHR/{CategoryId}.js" />
         <option value="$PROJECT_DIR$/data/searchEmployeeResourceSkillsAllStatusForHR/{CategoryId}.js" />
-        <option value="$PROJECT_DIR$/config/swagger.json" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" />
         <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForHR.js" />
         <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllStatusForHR.js" />
         <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingForHR.js" />
         <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingAndStatusForHR.js" />
-        <option value="$PROJECT_DIR$/dist/assets/css/app.css" />
+        <option value="$PROJECT_DIR$/dist/app/AdminMaster/TMP_AdminMaster.js" />
         <option value="$PROJECT_DIR$/dist/app/Partials/TMP_footer.html" />
+        <option value="$PROJECT_DIR$/dist/app/AdminMaster/TMP_Adminmaster.html" />
+        <option value="$PROJECT_DIR$/dist/app/TMP_Route.js" />
+        <option value="$PROJECT_DIR$/dist/app/RoleMaster/TMP_Rollmaster.html" />
+        <option value="$PROJECT_DIR$/dist/app/BUMaster/TMP_BUmaster.html" />
+        <option value="$PROJECT_DIR$/dist/assets/css/app.css" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/dist/assets/css/custom.css" />
+        <option value="$PROJECT_DIR$/lib/deleteSkillCategoryByAdmin.js" />
+        <option value="$PROJECT_DIR$/handlers/deleteSkillCategoryByAdmin.js" />
+        <option value="$PROJECT_DIR$/data/deleteSkillCategoryByAdmin.js" />
+        <option value="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" />
+        <option value="$PROJECT_DIR$/dist/app/Partials/TMP_LeftSidebar.html" />
+        <option value="$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js" />
+        <option value="$PROJECT_DIR$/data/deleteSubSkillCategoryByAdmin.js" />
+        <option value="$PROJECT_DIR$/lib/deleteSubSkillCategoryByAdmin.js" />
+        <option value="$PROJECT_DIR$/handlers/deleteSubSkillCategoryByAdmin.js" />
+        <option value="$PROJECT_DIR$/lib/fetchskillslist.js" />
+        <option value="$PROJECT_DIR$/dist/app/StatusMaster/statusmaster.html" />
+        <option value="$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js" />
+        <option value="$PROJECT_DIR$/handlers/upadatestatusmasterbyadmin.js" />
+        <option value="$PROJECT_DIR$/dist/app/StatusMaster/statusmaster.js" />
+        <option value="$PROJECT_DIR$/lib/deleteStatusByAdmin.js" />
+        <option value="$PROJECT_DIR$/config/swagger.json" />
+        <option value="$PROJECT_DIR$/data/deleteStatusByAdmin.js" />
+        <option value="$PROJECT_DIR$/handlers/deleteStatusByAdmin.js" />
+        <option value="$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html" />
+        <option value="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" />
+        <option value="$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js" />
+        <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" />
+        <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" />
         <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
       </list>
     </option>
@@ -274,6 +328,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -302,29 +357,10 @@
               <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
               <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,16 +371,16 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\08-01-2018\tmslivev1" />
+      <recent name="D:\08-01-2018\tmslivev1\data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\08-01-2018\tmslivev1\data" />
       <recent name="D:\08-01-2018\tmslivev1\handlers" />
       <recent name="D:\08-01-2018\tmslivev1\lib" />
-      <recent name="D:\tmsliverepolocal\tmsliverepo\data" />
-      <recent name="D:\tmsliverepolocal\tmsliverepo\handlers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\08-01-2018\tmslivev1" />
-      <recent name="D:\08-01-2018\tmslivev1\data" />
+      <recent name="D:\08-01-2018\tmslivev1\dist\assets\images\icons" />
+      <recent name="D:\08-01-2018\tmslivev1\dist\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -403,56 +439,36 @@
       <workItem from="1522040655288" duration="1572000" />
       <workItem from="1522045096827" duration="4597000" />
       <workItem from="1522057294098" duration="1784000" />
-      <workItem from="1522066847312" duration="39389000" />
+      <workItem from="1522066847312" duration="79093000" />
+      <workItem from="1522814741068" duration="14890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="551869000" />
+    <option name="totallyTimeSpent" value="606463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36163983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18425196" sideWeight="0.17862372" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18425196" sideWeight="0.82137626" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7700787" sideWeight="0.18740849" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7700787" sideWeight="0.8125915" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6084829" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6084829" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33385828" sideWeight="0.6727672" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6603774" sideWeight="0.1068814" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6084829" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5415987" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -568,52 +584,321 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBU.js">
+    <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_Header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+        <state relative-caret-position="179">
+          <caret line="47" column="71" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnBuId.js">
+    <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_Sidebar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="425">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="61" lean-forward="false" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/AdminMaster/TMP_Adminmaster.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1143">
+          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="341" column="15" lean-forward="false" selection-start-line="341" selection-start-column="15" selection-end-line="341" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="75" column="54" lean-forward="true" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/BUMaster/TMP_BUmaster.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/assets/images/icons/skill master.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/RoleMaster/TMP_Rollmaster.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/assets/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="274" column="0" lean-forward="true" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/deleteSkillCategoryByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="111" lean-forward="false" selection-start-line="6" selection-start-column="111" selection-end-line="6" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/deleteSkillCategoryByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deleteEmployeeResourceSkillsByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/AdminMaster/TMP_AdminMaster.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deleteSkillCategoryByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/profile/TMP_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addFeedback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/ResourceSkills/TMP_ResourceSkills.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2431">
+          <caret line="143" column="15" lean-forward="true" selection-start-line="143" selection-start-column="15" selection-end-line="143" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addEmployeeResourceSkillsByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_LeftSidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/updateEmployeeDataByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/upadateemployeetracking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deleteSubSkillCategoryByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="137" lean-forward="false" selection-start-line="14" selection-start-column="137" selection-end-line="14" selection-end-column="137" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/deleteSubSkillCategoryByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/deleteSubSkillCategoryByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchskillslist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/LoginPage/Tmp_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/TMP_Route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="140" column="27" lean-forward="true" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/app/Services/loginAuthService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="86" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="86" />
+        <state relative-caret-position="391">
+          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/EmployeeRegistration/TMP_EmpRegistration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="294" column="0" lean-forward="false" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/EmployeeRegistration/TMP_EmpRegistration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="214" column="7" lean-forward="true" selection-start-line="214" selection-start-column="7" selection-end-line="214" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/Feedback/TMP_feedback.js">
+    <entry file="file://$PROJECT_DIR$/lib/roleslistforhr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchstatusmasterlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/StatusMaster/statusmaster.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/updateEmployeeResourceSkillsByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="52" column="90" lean-forward="true" selection-start-line="52" selection-start-column="90" selection-end-line="52" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/upadatestatusmasterbyadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="46" column="86" lean-forward="false" selection-start-line="46" selection-start-column="76" selection-end-line="46" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/StatusMaster/statusmaster.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="87" column="4" lean-forward="true" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deleteStatusByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/deleteStatusByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/deleteStatusByAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,311 +906,105 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/feedbacklist.js" />
-    <entry file="file://$PROJECT_DIR$/lib/fetchskillslist.js">
+    <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/fetchfeedbacklist/{id}.js" />
-    <entry file="file://$PROJECT_DIR$/handlers/fetchfeedbacklist/{username}.js" />
-    <entry file="file://$PROJECT_DIR$/dist/app/LoginPage/Tmp_login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="70" lean-forward="false" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/updateEmployeeDataByHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/fetchfeedbacklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/fetchfeedbacklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="15" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/profile/TMP_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchfeedbacklist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/updateEmployeeDataByHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="48" column="357" lean-forward="false" selection-start-line="48" selection-start-column="357" selection-end-line="48" selection-end-column="357" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/updateEmployeeDataByHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="976" lean-forward="false" selection-start-line="24" selection-start-column="976" selection-end-line="24" selection-end-column="976" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnEmpId.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="30" column="90" lean-forward="true" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_Header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/assets/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="2795" column="28" lean-forward="true" selection-start-line="2795" selection-start-column="28" selection-end-line="2795" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/ResourceSkills/TMP_ResourceSkills.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/externalemployeeRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="85" column="37" lean-forward="true" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/addskillcategoryforadmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/addskillcategoryforadmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="-425">
+          <caret line="206" column="113" lean-forward="false" selection-start-line="206" selection-start-column="103" selection-end-line="206" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#h5#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1752#1758#0" expanded="true" />
+            <element signature="e#1758#1764#0" expanded="true" />
+            <element signature="e#1764#1770#0" expanded="true" />
+            <element signature="e#1770#1776#0" expanded="true" />
+            <element signature="e#1776#1782#0" expanded="true" />
+            <element signature="e#2167#2173#1" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#3029#3035#1" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/addskillcategoryforadmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/TMP_Route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="29" />
+        <state relative-caret-position="102">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.vscode/launch.json">
+    <entry file="file://$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="921">
+          <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/mysqlConnection.js">
+    <entry file="file://$PROJECT_DIR$/lib/updateskillcategoryforadmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="321">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/searchEmployeeResourceSkillsAllRatingForHR/{CategoryId}.js">
+    <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="21" column="98" lean-forward="true" selection-start-line="21" selection-start-column="98" selection-end-line="21" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/searchEmployeeResourceSkillsAllRatingForHR/{CategoryId}.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="170" lean-forward="false" selection-start-line="7" selection-start-column="170" selection-end-line="7" selection-end-column="170" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/searchEmployeeResourceSkillsAllRatingAndStatusForHR/{CategoryId}.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="75" lean-forward="false" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/searchEmployeeResourceSkillsAllRatingAndStatusForHR/{CategoryId}.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchstatusmasterlist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="74" lean-forward="false" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/searchEmployeeResourceSkillsAllStatusForHR/{CategoryId}.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/searchEmployeeResourceSkillsAllStatusForHR/{CategoryId}.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="46" />
+        <state relative-caret-position="263">
+          <caret line="146" column="26" lean-forward="true" selection-start-line="146" selection-start-column="26" selection-end-line="146" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/swagger.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="679" column="29" lean-forward="true" selection-start-line="679" selection-start-column="29" selection-end-line="679" selection-end-column="29" />
+        <state relative-caret-position="268">
+          <caret line="1681" column="63" lean-forward="false" selection-start-line="1681" selection-start-column="63" selection-end-line="1681" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="109" lean-forward="false" selection-start-line="25" selection-start-column="109" selection-end-line="25" selection-end-column="109" />
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/employeeRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1141" lean-forward="false" selection-start-line="18" selection-start-column="1113" selection-end-line="18" selection-end-column="1141" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllStatusForHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1415" lean-forward="false" selection-start-line="10" selection-start-column="1415" selection-end-line="10" selection-end-column="1415" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingForHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1378" lean-forward="false" selection-start-line="10" selection-start-column="1378" selection-end-line="10" selection-end-column="1378" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingAndStatusForHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1416" lean-forward="false" selection-start-line="7" selection-start-column="1416" selection-end-line="7" selection-end-column="1416" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/assets/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="527" column="5" lean-forward="true" selection-start-line="527" selection-start-column="5" selection-end-line="527" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_footer.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="378" column="22" lean-forward="true" selection-start-line="378" selection-start-column="22" selection-end-line="378" selection-end-column="22" />
+        <state relative-caret-position="485">
+          <caret line="1588" column="14" lean-forward="true" selection-start-line="1588" selection-start-column="14" selection-end-line="1588" selection-end-column="14" />
           <folding>
+            <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#3;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -934,7 +1013,7 @@
             <element signature="n#style#0;n#div#1;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#footer#0;n#div#1;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#footer#0;n#div#1;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#14829#14835#1" expanded="true" />
+            <element signature="e#15016#15022#1" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -955,8 +1034,8 @@
             <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#18077#18083#0" expanded="true" />
-            <element signature="e#18083#18089#0" expanded="true" />
+            <element signature="e#18195#18201#0" expanded="true" />
+            <element signature="e#18201#18207#0" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#2;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#6;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>

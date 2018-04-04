@@ -82,9 +82,10 @@ ng-bind="showInputsArticleWithInput? 'Dashboard': 'Manage Employees'">
 </button>
 <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" data-toggle="modal" data-target="#FeedbackModal" title="Feedback"><i class="fa fa-comments-o" ></i></button>
 </button>
-   <!-- <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="feedback" title="Feedback"><i class="fa fa-comments-o" ></i></button>
+    <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="skillmaster" title="Administration"><i class="fa fa-user"></i></button>
     </button>
--->
+   <!-- <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="feedback" title="Feedback"><i class="fa fa-comments-o" ></i></button>
+    </button>-->
 <!--  <a type="button" class="pull-right btn btn-box-tool" style="color:white;"
 style="cursor:pointer;width: 30px;">
 </a> -->
@@ -429,16 +430,12 @@ style="cursor:pointer;width: 30px;">
 <th style="width:150px;" ng-if="skill.ModifiedBy!=null">{{skill.ModifiedBy}}</th>
 <td style="width:150px;" ng-if="skill.ModifiedDate==null">{{skill.CreatedDate}}</td>
 <th style="width:150px;" ng-if="skill.ModifiedDate!=null">{{skill.ModifiedDate}}</th>
-<!--<td>{{skill.ModifiedBy}}</td>
-<th>{{skill.ModifiedDate}}</th>-->
 <td style="width:150px;" ng-if="skill.categoryName">
 <a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7" ng-click="updateskill(skill.categoryName,skill.skillName,skill.rating,skill.EmployeeSkillId,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
 data-toggle="modal" data-target="#EditSkillModal" data-whatever="@mdo">
 <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
 class="width_edit_icon" data-toggle="tooltip" data-placement="top">
 </a>&nbsp;&nbsp;
-<!-- <a href="" ng-if="userinfodata.RoleId==5" title="Delete Skills" ng-click="deleteskills(skill.EmployeeSkillId,CurEmployeeId)"><img src="assets/images/icons/delete icon.png" class="width_edit_icon"></a>  -->
-
 <a href="" ng-if="userinfodata.RoleId==5" title="Delete Skills" ng-click="deleteskills(skill.EmployeeSkillId,CurEmployeeId,Employee_First_Name,Employee_Last_Name,skill.UserId)">
 <img src="assets/images/icons/delete icon.png" class="width_edit_icon">
 </a>
@@ -518,13 +515,7 @@ padding-left: 4%;
 </div>
 </div>
 </div>
-
-
 <!-- End Add Feedback Form -->
-
-
-
-
 
 <!--Add Skills modal start-->
 <div class="modal fade" id="AddSkillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -1582,18 +1573,18 @@ Role
 </article>
     <article ng-if="!showInputsArticleWithInput">
     <article ng-if="userinfodata.RoleId==6">
-        <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiZmI1YTYyN2ItYzRjYy00M2FlLTliMTgtYjM5NjVhYjMyMjczIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe width="100%" height="800px" src={{url}} frameborder="0" allowFullScreen="true"></iframe>
     </article>
         <article ng-if="userinfodata.RoleId==5">
-            <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiZmI1YTYyN2ItYzRjYy00M2FlLTliMTgtYjM5NjVhYjMyMjczIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <iframe width="100%" height="800px" src={{url}} frameborder="0" allowFullScreen="true"></iframe>
         </article>
 <article ng-if="userinfodata.RoleId==7 && userinfodata.BuId==1 ">
    <!-- <div ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 ">-->
-    <iframe  width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiZmQwNTZhNTgtNzMxMy00MzYzLTlkZDktOGE5NzViNTQzODA3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe  width="100%" height="800px" src={{url}} frameborder="0" allowFullScreen="true"></iframe>
 </article>
     <article ng-if="userinfodata.RoleId==7  && userinfodata.BuId==4 ">
         <!-- <div ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 ">-->
-        <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiODZhODE3MzMtNjgzZC00MzgyLWFmMDMtNmZiYzU0MmE3YzUyIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe width="100%" height="800px" src={{url}} frameborder="0" allowFullScreen="true"></iframe>
     </article>
     </article>
 <div class="modal fade" id="FeedbackModal" tabindex="-1" ng-if="!showInputsArticleWithInput" role="dialog" aria-labelledby="feedbackModalLabel">

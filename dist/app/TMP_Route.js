@@ -31,7 +31,6 @@ app.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locatio
         , title: "Home"   
         , views: {
             "viewHeader": partials.header
-            , "viewSidebar": partials.sidebar
             , "viewFooter": partials.footer
             , "viewBody": {
                 templateUrl: "app/HomePage/TMP_Home.html"
@@ -163,9 +162,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locatio
                 , controller: "SkillMasterCtrl"
             }
         , }
-    , }).state('trackingSkills', {
-        url: "/trackingSkills"
-        , title: "TrackingSkills"
+    , }).state('rolemaster', {
+        url: "/rolemaster"
+        , title: "RoleMaster"
         /*, resolve: {
             auth: function ($q, loginAuthentication) {
                 var userInfo = loginAuthentication.getLoggedInUserInfo();
@@ -179,6 +178,55 @@ app.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locatio
                 }
             }
         }*/
+        , views: {
+            "viewHeader": partials.header
+            , "viewSidebar": partials.sidebar
+            , "viewFooter": partials.footer
+            , "viewBody": {
+                templateUrl: "app/RoleMaster/TMP_Rollmaster.html"
+                , controller: "RoleMasterCtrl"
+            }
+            , }
+        , }).state('bumaster', {
+        url: "/bumaster"
+        , title: "BUMaster"
+        /*, resolve: {
+            auth: function ($q, loginAuthentication) {
+                var userInfo = loginAuthentication.getLoggedInUserInfo();
+                if (userInfo) {
+                    return $q.when(userInfo);
+                }
+                else {
+                    return $q.reject({
+                        authenticated: false
+                    });
+                }
+            }
+        }*/
+        , views: {
+            "viewHeader": partials.header
+            , "viewSidebar": partials.sidebar
+            , "viewFooter": partials.footer
+            , "viewBody": {
+                templateUrl: "app/BUMaster/TMP_BUmaster.html"
+                , controller: "BUMasterCtrl"
+            }
+            , }
+        , }).state('adminmaster', {
+            url: "/adminmaster"
+            , title: "AdminMaster"
+            , views: {
+                "viewHeader": partials.header
+                , "viewSidebar": partials.sidebar
+                , "viewFooter": partials.footer
+                , "viewBody": {
+                    templateUrl: "app/AdminMaster/TMP_Adminmaster.html"
+                    , controller: "AdminMasterCtrl"
+                }
+                , }
+            , }).state('trackingSkills', {
+        url: "/trackingSkills"
+        , title: "TrackingSkills"
         , views: {
             "viewHeader": partials.header
             , "viewSidebar": partials.sidebar
@@ -206,7 +254,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locatio
         }*/
         , views: {
             "viewHeader": partials.header
-            , "viewSidebar": partials.sidebar
+           /* , "viewSidebar": partials.sidebar*/
             , "viewFooter": partials.footer
             , "viewBody": {
                 templateUrl: "app/profile/TMP_profile.html"

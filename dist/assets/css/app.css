@@ -1289,7 +1289,7 @@ _:-ms-lang(x) {
     padding-bottom: 20px;
     background-color: #fff;
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch
+    -webkit-overflow-scrolling: touch;
 }
 
 .sidebar:after {
@@ -1363,7 +1363,7 @@ _:-ms-lang(x) {
 .sidebar>.nav>li.open .nav,
 .sidebar>.nav>li.open>.nav-item,
 .sidebar>.nav>li.open>a {
-    background-color: #b5bec1;
+    background-color: #4ec5ea;
     color: #ffffff;
 }
 

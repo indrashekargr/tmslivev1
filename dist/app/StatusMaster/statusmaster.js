@@ -90,6 +90,7 @@ var updateStatus = {
 "Id": a
 , "StatusName": $scope.status.StatusName
 , "Description": $scope.status.Description
+   , "ModifiedBy": $scope.userinfodata.Username
 };
 //console.log(updateStatus);
 $http.put(ApiUrlPrefix + 'upadatestatusmasterbyadmin', updateStatus).success(function (data) {

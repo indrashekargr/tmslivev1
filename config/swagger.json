@@ -1588,6 +1588,117 @@
             }
         },
 
+        "/deleteSkillCategoryByAdmin": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "deleteSkillCategoryByAdmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "deleteSkillCategory",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/deleteSkillCategory"
+                        }
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/deleteSubSkillCategoryByAdmin": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "deleteSubSkillCategoryByAdmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "deleteSubSkillCategory",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/deleteSubSkillCategory"
+                        }
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/deleteStatusByAdmin": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "deleteStatusByAdmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "deleteStatus",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/deleteStatus"
+                        }
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
         "/deleteEmployeeMasterdetailByHR": {
             "put": {
                 "tags": [
@@ -2339,6 +2450,9 @@
                 "StatusName": {
                     "type": "string"
                 },
+                "ModifiedBy": {
+                    "type": "string"
+                },
                 "Description": {
                     "type": "string"
                 },
@@ -2430,6 +2544,55 @@
                 }
             }
         },
+
+        "deleteSkillCategory": {
+            "type": "object",
+            "properties": {
+                "CategoryId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "deleteSubSkillCategory": {
+            "type": "object",
+            "properties": {
+                "SkillId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ModifiedBy": {
+                    "type": "string"
+                },
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+
+        "deleteStatus": {
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ModifiedBy": {
+                    "type": "string"
+                },
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+
         "deleteEmployee": {
             "type": "object",
             "properties": {
