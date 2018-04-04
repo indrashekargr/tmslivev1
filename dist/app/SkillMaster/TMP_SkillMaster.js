@@ -149,7 +149,6 @@ $http.put(ApiUrlPrefix + 'updateskillcategoryforadmin', updateUser).then(functio
 $('#exampleModaladd').modal('hide');
     alert(response.data);
 $http.get(ApiUrlPrefix + 'fetchcategorylist').success(function (data) {
-
 $scope.getCategoryList = data;
 });
 }).error(function (data) {
@@ -242,7 +241,7 @@ alert(response.data);
 $('#EditSkillModal').modal('hide');
 $('#viewSubcategory').modal('show');
 $http.get(ApiUrlPrefix + 'fetchcategorylist').success(function (data) {
-alert("Sub skill category updated successfully");
+/*alert("Sub skill category updated successfully");*/
 $scope.getCategoryList = data;
 $scope.viewSubCategory($scope.CategoryID,$scope.CategoryID);
 });
