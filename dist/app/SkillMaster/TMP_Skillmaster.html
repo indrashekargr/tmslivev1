@@ -21,11 +21,37 @@
 }
 </style>
 
+<div class="col-lg-12">
+
+     <div class="col-lg-12" style="margin-top: 5px;margin-left: 22px;">
+        <a >
+            <!--<button class="btn btn-info pull-right MRTop" type="text" ng-click="showInputsArticleWithInput = !showInputsArticleWithInput"
+                    ng-bind="showInputsArticleWithInput? 'Dashboard': 'Manage Employees'">
+            </button>
+            <button class="btn btn-info pull-right MRTop" ng-if="userinfodata.RoleId==5" style="margin-left: 1%;margin-right: 1%;"  ng-if="showInputsArticleWithInput = showInputsArticleWithInput" ng-click="allemployeeList()" title="Get from PCC Data"><i class="fa fa-database" aria-hidden="true"></i></button>
+            </button>
+            <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" data-toggle="modal" data-target="#FeedbackModal" title="Feedback"><i class="fa fa-comments-o" ></i></button>
+            </button>-->
+            <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="home" title="Dashboard"><i class="fa fa-home"></i></button>
+            </button>
+
+        </a>
+
+
+    </div>
+
+</div>
+
+
 <div class="wrapper" >
 
-<section>
+<section style="
+    margin-left: 0;
+" >
 <!-- Page content-->
-<div class="content-wrapper">
+<div class="content-wrapper"style="
+    background: #f5f7fa;
+">
 
 <!-- <a type="button" class="pull-right btn btn-box-tool" style="color:white;"><img src="assets/images/icons/add.png" data-toggle="modal" data-target="#AddStatusModal" title="Add Skills" style="cursor:pointer;width: 30px;"></a> -->
 <a data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
@@ -34,14 +60,24 @@
 <!--<h5 class="text-center">Skill Category Master</h5>-->
     <h5 class="text-center" style="font-size: 21px;color: black;margin-top: -4px;margin-left: 0px;">Skill Category Master</h5>
 <div id="wrap">
-<table id="" class="table table-bordered table-hover">
-<thead class="theadbackgroud">
+<table id="" class="table  table-hover">
+<thead class="theadbackgroud" style="
+    background: #061743;
+">
 <tr>
-<th>No.</th>
+<th style="
+    color: white;
+">No.</th>
 
-<th>Category Name</th>
-<th>Description</th>
-<th>Action</th>
+<th style="
+    color: white;
+">Category Name</th>
+<th style="
+    color: white;
+">Description</th>
+<th style="
+    color: white;
+">Action</th>
 </tr>
 </thead>
 
@@ -82,7 +118,7 @@ title="Edit Skill Category">&nbsp;</a>
 <input type="text"  class="col-2 form-control" placeholder="Search" ng-model='searchText'>
 <span class="input-group-btn"></span>
 </div></div>
-<div class="" style="text-align: center; margin-left: 1px;  background-color: #23b7e5; background-image: linear-gradient(180deg, #23b7e5 0, #51c6ea); width:120%;height:65px;>
+<div class="" style="text-align: center; margin-left: 1px;  background-color: #23b7e5; background-image: linear-gradient(180deg, #23b7e5 0, #51c6ea); height:65px;>
 
     <footer style="background-color: #23b7e5; text-align: center;"> <p style="color:#fff;"> <span>&copy;</span> Copyright 2017-2018 <strong>IMSS(P) Ltd.</strong> All Rights Reserved.  TMS <strong>Version V 1.0.0</strong></p></footer>
 
@@ -91,8 +127,8 @@ title="Edit Skill Category">&nbsp;</a>
 <div class="modal fade" id="exampleModaladd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
-<div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="float: right;">×</span></button>
+<div class="modal-header" style="background: #061743;color: white;text-align: center;">
+    <button type="button" style="color: white;" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="float: right;">×</span></button>
 <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
 <h4 class="modal-title" id="exampleModalLabel">Edit Skill Category</h4>
 </div>
@@ -107,7 +143,9 @@ title="Edit Skill Category">&nbsp;</a>
 </div>
 </form>
 </div>
-<div class="modal-footer">
+<div class="modal-footer" style="
+    text-align: center;
+">
 <button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="updateCategory()">Update</button>
 <!--<button type="button" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal" ng-clicl="Clear()">Cancel</button>-->
 </div>
@@ -119,8 +157,8 @@ title="Edit Skill Category">&nbsp;</a>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
-<div class="modal-header" style="background-color: #cfdbe2;">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="float: right;">×</span></button>
+<div class="modal-header" style="background-color: #061743;color: #fafafa;text-align: center;">
+    <button type="button" style="color: white;" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="float: right;">×</span></button>
 <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
 <h4 class="modal-title" id="exampleModalLabel">Add Skill Category</h4>
 </div>
@@ -144,7 +182,9 @@ title="Edit Skill Category">&nbsp;</a>
         </div></div></div>
 </form>
 </div>
-<div class="modal-footer">
+<div class="modal-footer"style="
+    text-align: center;
+">
 <button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="AddCategory()">Add</button>
 <button type="button" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal" ng-click="Clear()">Cancel</button>
 </div>
@@ -159,7 +199,7 @@ data-keyboard="false">
 <div class="modal-dialog modal-lg" role="document">
 <div class="modal-content">
 
-<div class="modal-header" style="background:#30768c; color:white;">
+<div class="modal-header" style="background:white; color:white;">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -168,17 +208,17 @@ data-keyboard="false">
 <img src="assets/images/icons/add.png" data-toggle="modal" data-target="#AddsubSkillModal"
 title="Add Sub Category" style="cursor:pointer;">
 </a>
-<h4 class="modal-title" style="text-align: center;" id="exampleModalLabel">Skill Category List for {{CategoryName}}</h4>
+<h4 class="modal-title" style="text-align: center;color: #03a6ff;" id="exampleModalLabel">Skill Category List for {{CategoryName}}</h4>
 </div>
 
       <table class="table no-margin text-center">
           <thead>
-          <tr style="background: #cfdbe2;">
-              <th>No.</th>
+          <tr style="background: #061743;">
+              <th style="color: white;">No.</th>
               <!--<th>Skill Id</th> -->
-              <th>Skill Name</th>
-              <th>Description</th>
-              <th>Action </th>
+              <th style="color: white;">Skill Name</th>
+              <th style="color: white;">Description</th>
+              <th style="color: white;">Action </th>
           </tr>
           </thead></table>
 
@@ -232,9 +272,9 @@ data-whatever="@mdo">
 <div class="modal fade" id="AddsubSkillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
-<div class="modal-header" style="background-color: #cfdbe2;">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="float: right;">×</span></button>
-<h4 class="modal-title" id="exampleModalLabel">Add Sub Skill ({{CategoryName}})</h4>
+<div class="modal-header" style="background-color: #061743;color: white;text-align: center;">
+<button type="button" style="color: white;" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="float: right;">×</span></button>
+<h4  class="modal-title" id="exampleModalLabel">Add Sub Skill ({{CategoryName}})</h4>
 </div>
 <div class="modal-body">
 
@@ -257,7 +297,9 @@ data-whatever="@mdo">
 </div>
 </form>
 </div>
-<div class="modal-footer text-center">
+<div class="modal-footer text-center" style="
+    text-align: center;
+">
 <button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addSubCategory()">Add</button>
 <button type="button" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal" ng-click="subCategoryModal()">Close</button>
 </div>

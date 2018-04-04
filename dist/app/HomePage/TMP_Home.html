@@ -1,8 +1,8 @@
 <style>
 
     div.ex1 {
-        width: 870px;
-        height: 550px;
+        max-width: 870px;
+        max-height: 550px;
         overflow: scroll;
     }
 
@@ -82,7 +82,7 @@ ng-bind="showInputsArticleWithInput? 'Dashboard': 'Manage Employees'">
 </button>
 <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" data-toggle="modal" data-target="#FeedbackModal" title="Feedback"><i class="fa fa-comments-o" ></i></button>
 </button>
-    <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="skillmaster" title="Administration"><i class="fa fa-user"></i></button>
+    <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="skillmaster" title="Administration"><i class="fa fa-cog"></i></button>
     </button>
    <!-- <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="feedback" title="Feedback"><i class="fa fa-comments-o" ></i></button>
     </button>-->
@@ -104,7 +104,10 @@ title="Add New Employee" data-original-title="Add Employee">
 
 <div  class="col-lg-12">
 
-<div class="panel panel-default">
+<div class="panel panel-default" style="
+    border-top-width: 0px;
+    border-color: #f5f7fa;
+">
 <div class="panel-body" ng-if="showInputsArticleWithInput">
 <form role="form">
 <div class="clearfix">
@@ -198,27 +201,27 @@ Filter</button>
     <div id="wrap">
         <table class="table  table-hover">
             <thead style="background: #ddd;">
-            <tr style="border-bottom: 1px solid #eee;"  class="header">
-<th>No.</th>
+            <tr style="border-bottom: 1px solid #061743;background-color: #061743;/* color: white; */" class="header">
+<th style="color: white;">No.</th>
 <!--<th>Photo</th> -->
-<th >Employee No.</th>
-<th >Employee Name</th>
+<th style="color: white;">Employee No.</th>
+<th style="color: white;">Employee Name</th>
 <!-- <th>Designation</th> -->
 <!--  <th>Email</th> -->
 <th style="
     width: 16%;
-" >Contact Detail</th>
+color: white;" >Contact Detail</th>
 
-<th >Reporting Head</th>
+<th style="color: white;">Reporting Head</th>
 <!--<th>Prior Exp.</th>
 <th>Integra Exp.</th> -->
-<th >Total Exp.</th>
-<th >Resource Skills</th>
-<th  ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==6">Last Modified</th>
+<th style="color: white;">Total Exp.</th>
+<th style="color: white;">Resource Skills</th>
+<th style="color: white;"  ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==6">Last Modified</th>
 <!--<th>Availability</th> -->
 <!-- <th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3">Skills</th> -->
-<th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
-<th ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Track</th>
+<th style="color: white;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
+<th  style="color: white;" ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Track</th>
 </tr>
 </thead>
 <tbody style="height:320px;">
@@ -409,7 +412,12 @@ style="cursor:pointer;width: 30px;">
     </thead>
 </table>
 </div>
-    <div class="ex1">
+    <div class="ex1" style="
+    margin-left: 2%;
+    /* padding: 15px; */
+    padding-left: -5px;
+    margin-right: 5%;
+">
 <div class="modal-body">
 <div class="col-md-12" style="
     margin-top: -3%;
@@ -422,15 +430,15 @@ style="cursor:pointer;width: 30px;">
 <tbody ng-repeat="skill in skilldata" style="overflow: auto;">
 
 <tr ng-if="skill">
-<td style="width:150px;">{{skill.categoryName}}</td>
-<td style="width:150px;">{{skill.skillName}}</td>
+<td style="/* width:150px; */text-align: left;">{{skill.categoryName}}</td>
+<td style="/* width: 18px; */text-align: left;padding-left: 5%;">{{skill.skillName}}</td>
 <td style="width:150px;">{{skill.rating}}
 </td>
-<td style="width:150px;" ng-if="skill.ModifiedBy==null">{{skill.CreatedBy}}</td>
-<th style="width:150px;" ng-if="skill.ModifiedBy!=null">{{skill.ModifiedBy}}</th>
+<td style="width:150px;width:150px;text-align: right;" ng-if="skill.ModifiedBy==null">{{skill.CreatedBy}}</td>
+<th style="width:150px;width:150px;text-align: right;" ng-if="skill.ModifiedBy!=null">{{skill.ModifiedBy}}</th>
 <td style="width:150px;" ng-if="skill.ModifiedDate==null">{{skill.CreatedDate}}</td>
-<th style="width:150px;" ng-if="skill.ModifiedDate!=null">{{skill.ModifiedDate}}</th>
-<td style="width:150px;" ng-if="skill.categoryName">
+<th style="width:150px;text-align: right;" ng-if="skill.ModifiedDate!=null">{{skill.ModifiedDate}}</th>
+<td style="width:150px;text-align: right;" ng-if="skill.categoryName">
 <a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7" ng-click="updateskill(skill.categoryName,skill.skillName,skill.rating,skill.EmployeeSkillId,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
 data-toggle="modal" data-target="#EditSkillModal" data-whatever="@mdo">
 <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
@@ -1707,4 +1715,16 @@ else { return true; }
 }
 
 </script>
+    <style>
+
+
+        .explorationContainer .exploreCanvas {
+            overflow: visible;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #f5f7fa;
+            padding: 8px;
+            -ms-overflow-style: scrollbar;
+        }
+    </style>
 
