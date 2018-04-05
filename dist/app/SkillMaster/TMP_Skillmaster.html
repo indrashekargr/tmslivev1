@@ -236,7 +236,7 @@ title="Add Sub Category" style="cursor:pointer;">
 <th>Description</th>
 <th>Action </th>
 </tr>
-</thead>--><table class="table no-margin text-center">
+</thead>--><table class="table no-margin text-center" ng-if="getCategorySubList.length >0">
 <tbody ng-repeat="sub in getCategorySubList">
 <tr>
 <td>{{$index+1}}</td>
@@ -253,6 +253,7 @@ data-whatever="@mdo">
     </a>-->
 </td>
 </tr>
+
 </tbody>
 </table>
 </div>

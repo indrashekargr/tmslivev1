@@ -174,8 +174,10 @@ $scope.CategoryName = a;
 $scope.CategoryID = b;
 $http.get(ApiUrlPrefix + "fetchskillslist/" + $scope.CategoryID).success(function (data) {
 $scope.getCategorySubList = data;
-//console.log(data);
+
+
 });
+
 
 /*view sub category*/
 /*Add sub skill Category*/
@@ -236,15 +238,13 @@ var Subcategory = {
 };
 
 $http.put(ApiUrlPrefix + 'updatesubskillcategoryforadmin', Subcategory).then(function (response) {
-//console.log(response);
 alert(response.data);
 $('#EditSkillModal').modal('hide');
 $('#viewSubcategory').modal('show');
-$http.get(ApiUrlPrefix + 'fetchcategorylist').success(function (data) {
-/*alert("Sub skill category updated successfully");*/
-$scope.getCategoryList = data;
-$scope.viewSubCategory($scope.CategoryID,$scope.CategoryID);
-});
+    $http.get(ApiUrlPrefix + "fetchskillslist/" + $scope.CategoryID).success(function (data) {
+        $scope.getCategorySubList = data;
+
+    });;
 
 })
 , function (Error) {
