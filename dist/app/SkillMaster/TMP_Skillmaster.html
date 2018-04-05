@@ -214,15 +214,17 @@ title="Add Sub Category" style="cursor:pointer;">
       <table class="table no-margin text-center">
           <thead>
           <tr style="background: #061743;">
-              <th style="color: white;">No.</th>
+              <th style="color: white; color: white;text-align: left;padding-left: 4%;">No.</th>
               <!--<th>Skill Id</th> -->
-              <th style="color: white;">Skill Name</th>
-              <th style="color: white;">Description</th>
-              <th style="color: white;">Action </th>
+              <th style="color: white;text-align: left;">Skill Name</th>
+              <th style="color: white;text-align: left;">Description</th>
+              <th style="color: white;text-align: center;padding-left: 5%;text-align: left;">Action </th>
           </tr>
           </thead></table>
 
-<div class="modal-body">
+<div class="modal-body" style="
+margin-top: -4%;
+">
 <div class="col-md-12">
 <div class="box box-info ">
 <div class="box-body EMS_PanelHeading">
@@ -239,15 +241,15 @@ title="Add Sub Category" style="cursor:pointer;">
 </thead>--><table class="table no-margin text-center" ng-if="getCategorySubList.length >0">
 <tbody ng-repeat="sub in getCategorySubList">
 <tr>
-<td>{{$index+1}}</td>
+<td style="text-align: left;width: 10px;">{{$index+1}}</td>
 <!--<td>{{sub.SkillId}}</td> -->
-<td>{{sub.SkillName}}</td>
-<td>{{sub.Description}}</td>
-<td>
+<td style="text-align: center;width: 186px;">{{sub.SkillName}}</td>
+<td style="width: 401px;">{{sub.Description}}</td>
+<td style="width: 218px;padding-left: 6%;">
 <a href="" title="Edit Skills" ng-click="editSubcategory(sub.SkillId,sub.SkillName,sub.Description,sub.CategoryId)"
 data-toggle="modal" data-target="#EditSkillModal"
 data-whatever="@mdo">
-<img src="assets/images/icons/edit icon.png" style="margin-left: 12px;">
+<i class="fa fa-edit"></i>
 </a>
     <!--<a href=""  ng-if="userinfodata.RoleId==5" title="Delete Skill Category" ng-click="deleteSubCategory(sub.SkillId)"><img src="assets/images/icons/delete icon.png" class="width_edit_icon" style="margin-left: 12px;">
     </a>-->
