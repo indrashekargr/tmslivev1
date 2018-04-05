@@ -104,6 +104,7 @@ $http.post(ApiUrlPrefix + "addskillcategoryforadmin", assessment).then(function 
 //console.log(response);
 $("#exampleModal").modal("hide");
     alert(response.data);
+    $scope.Clear();
 $http.get(ApiUrlPrefix + 'fetchcategorylist').success(function (data) {
 $scope.getCategoryList = data;
 });
@@ -112,7 +113,7 @@ $scope.getCategoryList = data;
 },function(error){
 console.log(error);
 });
-$scope.Clear();
+
 }
 }
 

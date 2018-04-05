@@ -294,7 +294,7 @@ data-whatever="@mdo">
 <input type="text" ng-model="SkillName" class="form-control" id="recipient-name"> </div>
 <div class="form-group">
 <label for="message-text" class="control-label">Description*:</label>
-<textarea class="form-control" ng-model="Description" id="message-text"></textarea>
+<textarea class="form-control" id="textarea1" ng-model="Description" id="message-text"></textarea>
 </div>
 </form>
 </div>
@@ -358,5 +358,24 @@ document.getElementById("wrap").addEventListener("scroll", function () {
 var translate = "translate(0," + this.scrollTop + "px)";
 this.querySelector("thead").style.transform = translate;
 });
+
+$("textarea").on('change paste keyup', function () {
+    var currText = $(this).val();
+    if (currText.length > 30) {
+        var text = $(this).text();
+        $(this).text(text.substr(0, 30));
+        alert("You have reached the maximum character length 30");
+    }
+});
+
+$("textarea1").on('change paste keyup', function () {
+    var currText = $(this).val();
+    if (currText.length > 30) {
+        var text = $(this).text();
+        $(this).text(text.substr(0, 30));
+        alert("You have reached the maximum character length 30");
+    }
+});
+
 </script>
 

@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8df1417e-751c-4ec7-91de-9dc86be1e44f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" afterPath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js" afterPath="$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html" afterPath="$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fetchskillslist.js" afterPath="$PROJECT_DIR$/lib/fetchskillslist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TMP_SkillMaster.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TMP_SkillMaster.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="181" column="21" lean-forward="true" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
+            <state relative-caret-position="238">
+              <caret line="106" column="19" lean-forward="false" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -35,8 +32,8 @@
       <file leaf-file-name="TMP_Home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="283" column="13" lean-forward="false" selection-start-line="283" selection-start-column="13" selection-end-line="283" selection-end-column="13" />
+            <state relative-caret-position="181">
+              <caret line="574" column="91" lean-forward="false" selection-start-line="574" selection-start-column="74" selection-end-line="574" selection-end-column="91" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -92,11 +89,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TMP_Skillmaster.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TMP_Home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="304" column="4" lean-forward="false" selection-start-line="304" selection-start-column="4" selection-end-line="308" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TMP_Route.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/app/TMP_Route.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2618">
+              <caret line="154" column="11" lean-forward="true" selection-start-line="154" selection-start-column="11" selection-end-line="154" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TMP_Skillmaster.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
+            <state relative-caret-position="187">
+              <caret line="172" column="53" lean-forward="false" selection-start-line="172" selection-start-column="41" selection-end-line="172" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -139,7 +156,7 @@
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#6;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#6;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#6;n#!!top" expanded="true" />
-                <marker date="1522920666370" expanded="false" signature="757:790" ph="..." />
+                <marker date="1522929281563" expanded="false" signature="757:790" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,7 +176,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>placeholder=&quot;Search&quot;</find>
       <find>EmployeeList</find>
       <find>sidebar</find>
       <find>aside-inner</find>
@@ -189,6 +205,7 @@
       <find>viewSubcategory</find>
       <find>skillUpdate</find>
       <find>fetchskillslist</find>
+      <find>addResourceskills</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -244,14 +261,14 @@
         <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" />
         <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" />
         <option value="$PROJECT_DIR$/dist/app/Partials/TMP_LeftSidebar.html" />
-        <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
         <option value="$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js" />
         <option value="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" />
         <option value="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" />
         <option value="$PROJECT_DIR$/lib/fetchskillslist.js" />
         <option value="$PROJECT_DIR$/lib/fetchResourceSkillDetailsBasedOnUser.js" />
-        <option value="$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js" />
+        <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
         <option value="$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html" />
+        <option value="$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js" />
       </list>
     </option>
   </component>
@@ -320,11 +337,6 @@
             <path>
               <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
               <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -332,6 +344,13 @@
               <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -416,23 +435,22 @@
       <workItem from="1522045096827" duration="4597000" />
       <workItem from="1522057294098" duration="1784000" />
       <workItem from="1522066847312" duration="79093000" />
-      <workItem from="1522814741068" duration="35344000" />
+      <workItem from="1522814741068" duration="39694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="626917000" />
+    <option name="totallyTimeSpent" value="631267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30673498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16850394" sideWeight="0.18740849" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5448819" sideWeight="0.18740849" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16850394" sideWeight="0.8125915" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5448819" sideWeight="0.8125915" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6084829" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -804,14 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/TMP_Route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="139" column="31" lean-forward="true" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/addskillcategoryforadmin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -932,14 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="989" column="22" lean-forward="true" selection-start-line="989" selection-start-column="22" selection-end-line="989" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/fetchskillslist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -948,18 +950,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js">
+    <entry file="file://$PROJECT_DIR$/dist/app/TMP_Route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="181" column="21" lean-forward="true" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
+        <state relative-caret-position="2618">
+          <caret line="154" column="11" lean-forward="true" selection-start-line="154" selection-start-column="11" selection-end-line="154" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="304" column="4" lean-forward="false" selection-start-line="304" selection-start-column="4" selection-end-line="308" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="283" column="13" lean-forward="false" selection-start-line="283" selection-start-column="13" selection-end-line="283" selection-end-column="13" />
+        <state relative-caret-position="181">
+          <caret line="574" column="91" lean-forward="false" selection-start-line="574" selection-start-column="74" selection-end-line="574" selection-end-column="91" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1016,8 +1026,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_Skillmaster.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
+        <state relative-caret-position="187">
+          <caret line="172" column="53" lean-forward="false" selection-start-line="172" selection-start-column="41" selection-end-line="172" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1060,8 +1070,16 @@
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#6;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#6;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#6;n#!!top" expanded="true" />
-            <marker date="1522920666370" expanded="false" signature="757:790" ph="..." />
+            <marker date="1522929281563" expanded="false" signature="757:790" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/SkillMaster/TMP_SkillMaster.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="106" column="19" lean-forward="false" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
