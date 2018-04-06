@@ -1,6 +1,6 @@
 'use strict';
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 8000;
 
 var http = require('http');
 var express = require('express');

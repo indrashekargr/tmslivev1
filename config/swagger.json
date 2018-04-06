@@ -1403,6 +1403,44 @@
             }
         },
 
+
+        "/upadateemployeetrackinghr": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "upadateemployeetrackinghr",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updateEmployeeSkillshr",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/upadateemployeetrackinghr"
+                        }
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
         "/updateEmployeeDataByHR": {
             "put": {
                 "tags": [
@@ -2295,10 +2333,6 @@
 
                     "type": "string"
                 },
-                "type": {
-                    "format": "int32",
-                    "type": "integer"
-                },
                 "IsDeleted": {
                     "format": "int32",
                     "type": "integer"
@@ -2433,9 +2467,47 @@
                     "format": "int32",
                     "type": "integer"
                 },
+
+                "ProjectName": {
+                    "type": "string"
+                },
+
+                "CompanyName": {
+                    "type": "string"
+                },
+
+                "FromDate": {
+                    "type": "string"
+                },
+
                 "ToDate": {
-                    "type": "string",
-                    "format": "date-time"
+                    "type": "string"
+                }
+            }
+        },
+
+        "upadateemployeetrackinghr": {
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+
+                "ProjectName": {
+                    "type": "string"
+                },
+
+                "CompanyName": {
+                    "type": "string"
+                },
+
+                "FromDate": {
+                    "type": "string"
                 }
             }
         },

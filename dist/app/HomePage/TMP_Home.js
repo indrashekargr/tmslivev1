@@ -1,24 +1,10 @@
 var ApiUrlPrefix = "/";
 
-app.controller('homeCtrl', function ($rootScope, $scope, $sce, $http, $state, $stateParams,loginAuthentication, $interval, $window, $location, $timeout,$filter) {
+app.controller('homeCtrl', function ($rootScope, $scope, $http, $state, $stateParams,loginAuthentication, $interval, $window, $location, $timeout,$filter) {
 $scope.userinfodata = loginAuthentication.getLoggedInUserInfo();
 console.log($scope.userinfodata);
 console.log($scope.userinfodata.EmployeeId);
 console.log($scope.userinfodata.BuId);
-
-    if($scope.userinfodata.HOURE >8 && $scope.userinfodata.HOURE <= 12){
-
-        $scope.url = $sce.trustAsResourceUrl($scope.userinfodata.URL1);
-    }
-    if($scope.userinfodata.HOURE >12 && $scope.userinfodata.HOURE <= 17){
-
-        $scope.url = $sce.trustAsResourceUrl($scope.userinfodata.URL2);
-    }
-    if($scope.userinfodata.HOURE >17 && $scope.userinfodata.HOURE <= 20){
-
-        $scope.url = $sce.trustAsResourceUrl($scope.userinfodata.URL1);
-    }
-
 //console.log($scope.userinfodata.currentUser);
 $scope.state = $state;
 window.$scope = $scope;
@@ -349,20 +335,20 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
     }*/
 
   // Add Employee Tracking Profile
-  $scope.addTracking = function(a,b,c,d,e,ci,fn,ln) {
+  $scope.addTracking = function(a,b,c,d,ci,fn,ln) {
     // c = $filter('date')($scope.FromDate, 'yyyy-MM-dd');
     // e = $filter('date')($scope.ToDate, 'yyyy-MM-dd');
  
      $("#AddTrakingModal").modal("show");
-     if(a == undefined && b== undefined && e== undefined){
+     if(a == undefined && b== undefined){
      alert("Please select all the mandatory fields");
      }
      else if(a== null ||a== undefined||a==""){
      alert("Please enter Project Name");
      }
-     else if(e== null || e== undefined||e==""){
+     /*else if(e== null || e== undefined||e==""){
          alert("Please Select Availability Type");
-     }
+     }*/
      else if(b== null || b== undefined||b==""){
      alert("Please enter Company Name");
      }
@@ -378,7 +364,7 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
      , "CompanyName": b
      , "FromDate":c
      , "ToDate":d
-     , "type": e
+     /*, "type": e*/
      };
      
    $scope.CurEmployeeId =ci ;
@@ -912,59 +898,86 @@ $scope.error = "An error has occured while updating! " + data;
 
 //Edit Project Tracking Profile for update
 
-$scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)	{
-    
-    
-    
+$scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,CurEmployeeId,Employee_First_Name,Employee_Last_Name) {
+
+
     $scope.track = {
-    "ProjectName":ProjectName,
-    "CompanyName":CompanyName,
-    "FromDate":FromDate,
-    "ToDate":ToDate,
-    "Id": Id,
-    "UserId": UserId
+        "ProjectName": ProjectName,
+        "CompanyName": CompanyName,
+        "FromDate": new Date(FromDate),
+        "ToDate": ToDate,
+        "Id": Id,
+        "UserId": UserId
     };
-    $scope.ToDate=ToDate;
+    $scope.ToDate = ToDate;
     $scope.CurEmployeeId = CurEmployeeId;
-    $scope.Employee_First_Name=Employee_First_Name;
-    $scope.Employee_Last_Name=Employee_Last_Name;
-    
+    $scope.Employee_First_Name = Employee_First_Name;
+    $scope.Employee_Last_Name = Employee_Last_Name;
+
     //console.log($scope.Employee_First_Name);
     console.log($scope.track);
-    $scope.editTrackingProject= function (Id,UserId)
-    {
-        $scope.firstDate = $filter('date')($scope.track.ToDate, 'yyyy-MM-dd');
-       //var firstdate = $filter('date')(new Date($scope.track.ToDate, 'dd/mm/yyyy'));
-        //$scope.track.ToDate = new Date($scope.track.ToDate);
-    if($scope.firstDate == null || $scope.firstDate == undefined || $scope.firstDate  == ""){
-    alert("Please select To date");
-    } else {
-       
-    var track = {
-       
-    "ToDate":$scope.track.ToDate,
-    "Id":Id,
-    "UserId":  UserId
-    }
-    console.log(track);
-    $http.put(ApiUrlPrefix + 'upadateemployeetracking', track).success(function (data) {
-    //console.log(data);
-    alert("Project closed successfully");
+    $scope.editTrackingProject = function (Id, UserId) {
+
+        //$scope.firstDate = $filter('date')($scope.track.ToDate, 'yyyy-MM-dd');
+
+        if ($scope.track.ToDate == null || $scope.track.ToDate == undefined || $scope.track.ToDate == "") {
+            $scope.track.FromDate = $filter('date')($scope.track.FromDate, 'yyyy-MM-dd');
+            //alert("Please select To date");
+            var track = {
+                "ProjectName": $scope.track.ProjectName,
+                "CompanyName": $scope.track.CompanyName,
+                "FromDate": $scope.track.FromDate,
+                "Id": Id,
+                "UserId": UserId
+            }
+            console.log(track);
+            $http.put(ApiUrlPrefix + 'upadateemployeetrackinghr', track).success(function (data) {
+                //console.log(data);
+                alert("Updated Successfully");
 
 
-    $("#EditTrackModal").modal("hide");
-    $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+UserId).success(function (data) {
-    $scope.trackdata=data;
-    //alert("Updated successfully!!"); 
-    
-    });
-    }).error(function (data) {
-    $scope.error = "An error has occured while deleting! " + data;                
-    });
-    }  
-    }
-    }
+                $("#EditTrackModal").modal("hide");
+                $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
+                    $scope.trackdata = data;
+                    //alert("Updated successfully!!");
 
+                });
+            }).error(function (data) {
+                $scope.error = "An error has occured while deleting! " + data;
+            })
+
+
+
+        } else  if ($scope.track.ToDate != null){
+            $scope.track.FromDate = $filter('date')($scope.track.FromDate, 'yyyy-MM-dd');
+            $scope.track.ToDate = $filter('date')($scope.track.ToDate, 'yyyy-MM-dd');
+            var track = {
+                "ProjectName": $scope.track.ProjectName,
+                "CompanyName": $scope.track.CompanyName,
+                "FromDate": $scope.track.FromDate,
+                "ToDate": $scope.track.ToDate,
+                "Id": Id,
+                "UserId": UserId
+            }
+            console.log(track);
+            $http.put(ApiUrlPrefix + 'upadateemployeetracking', track).success(function (data) {
+                //console.log(data);
+                alert("Project closed successfully");
+
+
+                $("#EditTrackModal").modal("hide");
+                $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
+                    $scope.trackdata = data;
+                    //alert("Updated successfully!!");
+
+                });
+            }).error(function (data) {
+                $scope.error = "An error has occured while deleting! " + data;
+            });
+        }
+        /*}*/
+    }
+}
 
 // Deleting Employee record based on Employee ID in the home 
 $scope.deleteEmployeeProfile = function (EmployeeId) {

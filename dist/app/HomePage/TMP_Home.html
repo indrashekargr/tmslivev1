@@ -813,23 +813,23 @@ border-style: double;
 <!--Made it easier, so no more redundant copypasta in other pages-->
 <tr>
 <td style="width:150px;
-border-color: #393350;
+border-color: #ffffff;
 border-style: double;  ">{{track.CompanyName}}</td>
 
 <td style="width:150px;
-border-color: #393350;
+border-color: #ffffff;
 border-style: double;  ">{{track.ProjectName}}</td>
 <td style="width:150px;
-border-color: #393350;
+border-color: #ffffff;
 border-style: double;  ">{{track.type}}</td>
 <td style="width:150px;
-border-color: #393350;
+border-color: #ffffff;
 border-style: double;  ">{{track.FromDate}}</td>
 <td style="width:150px;
-border-color: #393350;
+border-color: #ffffff;
 border-style: double;  ">{{track.ToDate}}</td>
 <td style="width:150px;
-border-color: #393350;
+border-color: #ffffff;
 border-style: double;  ">
 <!--<td ng-if="skill.categoryName"> -->
 <!--   <a href="" title="Edit Project" ng-if="userinfodata.RoleId==5" ng-click="editTrackingProject(track.ToDate)"
@@ -910,7 +910,7 @@ class="width_edit_icon" data-toggle="tooltip" data-placement="top">
 <input input type="date" id="end_date" class="form-control" ng-model="ToDate" placeholder="12/11/2017" onblur="compareDate()"> </div>
 </div>
 </div>
-<div class="row">
+<!--<div class="row">
 <div class="col-lg-4">
 <div class="form-group">
 <label>Availability
@@ -918,19 +918,19 @@ class="width_edit_icon" data-toggle="tooltip" data-placement="top">
 style="color:#3c8dbc;">*</span>
 </label>
 <select class="form-control" ng-model="type" ng-change="statusChange(type)" ng-options="status.Id as status.StatusName for status in statusmaster">
-<option value="">--
+<option value="">&#45;&#45;
 Select
 Status
 Master
---</option>
+&#45;&#45;</option>
 </select>
 
 </div>
 </div>
-</div>
+</div>-->
 </form>
 <div class="modal-footer text-center">
-<button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addTracking(ProjectName,CompanyName,FromDate,ToDate,type,CurEmployeeId,Employee_First_Name,Employee_Last_Name)">Add</button>
+<button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addTracking(ProjectName,CompanyName,FromDate,ToDate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)">Add</button>
 <button type="reset" class="mb-sm btn btn-danger btn-outline " ng-click="Clear()" data-dismiss="modal">Close</button>
 </div>
 </div>
@@ -973,7 +973,7 @@ margin: 2%;
 <span
 style="color:#3c8dbc;">*</span>
 </label>
-<input type="text" placeholder="Enter Project name" ng-model="track.ProjectName" class="form-control" readonly="readonly">
+<input type="text" placeholder="Enter Project name" ng-model="track.ProjectName" class="form-control">
 </div>
 </div>
 <div class="col-lg-6">
@@ -982,7 +982,7 @@ style="color:#3c8dbc;">*</span>
 <span
 style="color:#3c8dbc;">*</span>
 </label>
-<input type="text" placeholder="Enter Project name" ng-model="track.CompanyName" class="form-control" readonly="readonly">
+<input type="text" placeholder="Enter Company name" ng-model="track.CompanyName" class="form-control">
 </div>
 </div>
 
@@ -994,7 +994,7 @@ style="color:#3c8dbc;">*</span>
 <span
 style="color:#3c8dbc;">*</span>
 </label>
-<input type="text" id="dateInput" id="input" ng-model="track.FromDate" class="form-control datepick" readonly="readonly"> </div>
+<input type="date" id="start_date1" ng-model="track.FromDate" class="form-control datepick"> </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
@@ -1002,12 +1002,12 @@ style="color:#3c8dbc;">*</span>
 <span
 style="color:#3c8dbc;">*</span>
 </label>
-<input type="date" id="dateInput" id="input" ng-model="track.ToDate" class="form-control datepick"> </div>
+<input type="date" id="end_date1" ng-model="track.ToDate" class="form-control datepick" onblur="compareDate1()"> </div>
 </div>
 
 </div>
 <div class="text-center">
-<button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="editTrackingProject(track.Id,track.UserId,track.ToDate)">Update</button>
+<button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="editTrackingProject(track.Id,track.UserId,track.ProjectName,track.CompanyName,track.FromDate,track.ToDate)">Update</button>
 <!--<button type="submit" class="mb-sm btn btn-warning btn-outline">Disengage</button> -->
 
 </div>
@@ -1714,6 +1714,27 @@ return true;
 else { return true; }
 }
 
+
+function compareDate1() {
+    var str = document.getElementById("start_date1").value;
+    var end = document.getElementById("end_date1").value;
+    var year = str.substring(0,4);
+    var month = str.substring(5,7);
+    var date = str.substring(8,10);
+    var endYear = end.substring(0,4);
+    var endMonth = end.substring(5,7);
+    var endDate = end.substring(8,10);
+    var startDate = new Date(year, month-1, date);
+    var endDate = new Date(endYear, endMonth-1, endDate);
+
+    if (startDate > endDate) {
+        alert('start date should be less than end date');
+        return false;
+    } else if (startDate =! null && endDate == null) {
+        return true;
+    }
+    else { return true; }
+}
 </script>
     <style>
 
