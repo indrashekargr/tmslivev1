@@ -933,15 +933,19 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
             console.log(track);
             $http.put(ApiUrlPrefix + 'upadateemployeetrackinghr', track).success(function (data) {
                 //console.log(data);
-                alert("Updated Successfully");
+                if (track.FromDate < track.ToDate) {
+                    alert("Updated Successfully");
 
 
-                $("#EditTrackModal").modal("hide");
-                $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
-                    $scope.trackdata = data;
-                    //alert("Updated successfully!!");
+                    $("#EditTrackModal").modal("hide");
+                    $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
+                        $scope.trackdata = data;
+                        //alert("Updated successfully!!");
 
-                });
+                    });
+                } else {
+                    alert('start date should be less than end date');
+                }
             }).error(function (data) {
                 $scope.error = "An error has occured while deleting! " + data;
             })
