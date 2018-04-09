@@ -464,7 +464,7 @@ class="width_edit_icon" data-toggle="tooltip" data-placement="top">
 </div>
 </div></div>
 <div class="modal-footer" style="text-align: center;">
-<button  type="reset" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal">Close</button>
+<!--<button  type="reset" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal">Close</button>-->
 </div>
 </div>
 </div>
@@ -1714,10 +1714,15 @@ var endDate = new Date(endYear, endMonth-1, endDate);
 if (startDate > endDate) {
 alert('start date should be less than end date');
 return false;
-} else if (startDate =! null && endDate == null) {
+}
+else if ((endDate != null && startDate != null) && (endDate < startDate)) {
+    alert('start date should be less than end date');
+    return false;
+}
+
+else if ((startDate =! null && endDate == null) ||(endDate != null && endDate > startDate && startDate != null)) {
 return true;
-} 
-else { return true; }
+}
 }
 
 

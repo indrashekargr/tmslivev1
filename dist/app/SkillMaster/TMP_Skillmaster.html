@@ -367,6 +367,9 @@ $("textarea").on('change paste keyup', function () {
         var text = $(this).text();
         $(this).text(text.substr(0, 30));
         alert("You have reached the maximum character length 30");
+        return false;
+    } else if (currText.length < 30){
+  return true;
     }
 });
 
