@@ -379,7 +379,7 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
          } else {
              response.toDate == response.toDate;
          }
-         if (newTracking.ToDate == null && newTracking.FromDate != null|| newTracking.ToDate != null && newTracking.ToDate > newTracking.FromDate && newTracking.FromDate != null){
+         if (newTracking.ToDate == null && newTracking.FromDate != null|| newTracking.ToDate != null && new Date(newTracking.ToDate) > new Date(newTracking.FromDate) && newTracking.FromDate != null){
              alert("Employee Tracking data added successfully");
          // $location.path( "/home" );
          //alert(response.data);
