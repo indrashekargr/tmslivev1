@@ -373,23 +373,29 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
      
      //console.log(newSkills);
      $http.post(ApiUrlPrefix + 'addtrackingemployee ', newTracking).then(function (response) {
-     //console.log(response);
-         if(response.toDate == null){
+         //console.log(response);
+         if (response.toDate == null) {
              response.toDate == '';
          } else {
              response.toDate == response.toDate;
          }
-     alert("Employee Tracking data added successfully");
-    // $location.path( "/home" );
-     //alert(response.data);
- 
-     $("#AddTrakingModal").modal("hide");
-     $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+UserId).success(function (data) {
-         $scope.trackdata=data;
-         console.log( $scope.trackdata);
-         //$scope.AddTrackClear();
-         //console.log(data);
+         if (newTracking.ToDate == null && newTracking.FromDate != null|| newTracking.ToDate != null && newTracking.ToDate > newTracking.FromDate && newTracking.FromDate != null){
+             alert("Employee Tracking data added successfully");
+         // $location.path( "/home" );
+         //alert(response.data);
+
+         $("#AddTrakingModal").modal("hide");
+         $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
+             $scope.trackdata = data;
+             console.log($scope.trackdata);
+             //$scope.AddTrackClear();
+             //console.log(data);
          });
+     }  if (newTracking.ToDate =! null && newTracking.ToDate < newTracking.FromDate && newTracking.FromDate != null) {
+             alert('start date should be less than end date');
+         } else {
+
+         }
      },function(error){
          console.log(error);
          });
@@ -933,19 +939,15 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
             console.log(track);
             $http.put(ApiUrlPrefix + 'upadateemployeetrackinghr', track).success(function (data) {
                 //console.log(data);
-                if (track.FromDate < track.ToDate) {
-                    alert("Updated Successfully");
+                alert("Updated Successfully");
 
 
-                    $("#EditTrackModal").modal("hide");
-                    $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
-                        $scope.trackdata = data;
-                        //alert("Updated successfully!!");
+                $("#EditTrackModal").modal("hide");
+                $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
+                    $scope.trackdata = data;
+                    //alert("Updated successfully!!");
 
-                    });
-                } else {
-                    alert('start date should be less than end date');
-                }
+                });
             }).error(function (data) {
                 $scope.error = "An error has occured while deleting! " + data;
             })
