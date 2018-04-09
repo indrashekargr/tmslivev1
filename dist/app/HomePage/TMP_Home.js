@@ -1,6 +1,6 @@
 var ApiUrlPrefix = "/";
 
-app.controller('homeCtrl', function ($rootScope, $scope, $http, $state, $stateParams,loginAuthentication, $interval, $window, $location, $timeout,$filter) {
+app.controller('homeCtrl', function ($rootScope, $scope, $http, $sce, $state, $stateParams,loginAuthentication, $interval, $window, $location, $timeout,$filter) {
 $scope.userinfodata = loginAuthentication.getLoggedInUserInfo();
 console.log($scope.userinfodata);
 console.log($scope.userinfodata.EmployeeId);
@@ -8,6 +8,20 @@ console.log($scope.userinfodata.BuId);
 //console.log($scope.userinfodata.currentUser);
 $scope.state = $state;
 window.$scope = $scope;
+
+    if($scope.userinfodata.HOURE >8 && $scope.userinfodata.HOURE <= 12){
+
+        $scope.url = $sce.trustAsResourceUrl($scope.userinfodata.URL1);
+    }
+    if($scope.userinfodata.HOURE >12 && $scope.userinfodata.HOURE <= 17){
+
+        $scope.url = $sce.trustAsResourceUrl($scope.userinfodata.URL2);
+    }
+    if($scope.userinfodata.HOURE >17 && $scope.userinfodata.HOURE <= 20){
+
+        $scope.url = $sce.trustAsResourceUrl($scope.userinfodata.URL1);
+    }
+
 
 //fetch all Employees datalist using PCC Application Server
 // Fetch All Employee Data in the home with the HR login
