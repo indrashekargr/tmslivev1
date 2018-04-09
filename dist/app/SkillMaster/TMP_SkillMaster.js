@@ -141,6 +141,8 @@ alert("Please enter Category name");
 }else if($scope.category.Description== null || $scope.category.Description== undefined||$scope.category.Description==""){
 alert("Please enter Description");
 
+}else if($scope.category.Description.length>30){
+    alert("Description must be 30 digits");
 }
 else{
 
@@ -194,7 +196,11 @@ alert("Please enter all the mandatory fields");
 alert("Please enter Skill name");
 } else if($scope.Description== null || $scope.Description== undefined||$scope.Description==""){
 alert("Please enter Description");
-} else {
+} else if($scope.Description.length>30){
+    alert("Description must be 30 digits");
+}
+
+else {
 
 var addSubCategory = {
 "CategoryId" : $scope.CategoryID
