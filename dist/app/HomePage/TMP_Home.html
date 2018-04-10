@@ -130,9 +130,12 @@ style="color:#3c8dbc;">&nbsp;*</span></label>
 <div class="form-group">
 <label>Skills:<span
 style="color:#3c8dbc;">&nbsp;*</span></label>
-<select class="form-control" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
-<option value="">--Select Skills--</option>
+<select class="form-control" ng-hide="skilllist.length == 0" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+    <option value="">--Select Skills--</option>
 </select>
+    <select class="form-control" ng-show="skilllist.length == 0" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+        <option value="" >--No Skill Set--</option>
+    </select>
 </div>
 </div>
 <div class="col-lg-2">
