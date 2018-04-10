@@ -227,6 +227,7 @@ DataCall();
 // Fetch all category list for search in the resource skill 
 $http.get(ApiUrlPrefix + 'fetchcategorylist').success(function (data) {
     $scope.categorylist=data;
+
     },function(data){
     console.log(data);
     },function(error){
@@ -236,6 +237,7 @@ $http.get(ApiUrlPrefix + 'fetchcategorylist').success(function (data) {
 // Fetch all status master data for search in the resource skill 
 $http.get(ApiUrlPrefix + 'fetchstatusmasterlist').success(function (data) {
     $scope.statuslist=data;
+
     },function(data){
     console.log(data);
     },function(error){
@@ -248,6 +250,7 @@ $http.get(ApiUrlPrefix + 'fetchstatusmasterlist').success(function (data) {
 $scope.getskilllist = function(a){
     $http.get(ApiUrlPrefix + 'fetchskillslist/'+a).success(function (data) {
     $scope.skilllist=data;
+
     //console.log(data);
     },function(error){
     console.log(error);
@@ -370,6 +373,12 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
      
      alert("Please select From Date");
      }
+
+     else if( new Date(c) != null &&  new Date(d) != null &&  new Date(d) <  new Date(c)){
+
+         alert('start date should be less than end date');
+     }
+
      else
      {
      var newTracking = {
@@ -405,7 +414,7 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
              //$scope.AddTrackClear();
              //console.log(data);
          });
-     }  if (newTracking.ToDate =! null && newTracking.ToDate < newTracking.FromDate && newTracking.FromDate != null) {
+     }  if (newTracking.ToDate =! null && newTracking.ToDate < newTracking.FromDate) {
              alert('start date should be less than end date');
          } else {
 
