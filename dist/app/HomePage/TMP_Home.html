@@ -127,14 +127,17 @@ style="color:#3c8dbc;">&nbsp;*</span></label>
 </div>
 </div>
 <div class="col-lg-2">
-<div class="form-group">
-<label>Skills:<span
-style="color:#3c8dbc;">&nbsp;*</span></label>
-<select class="form-control" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
-<option value="">--Select Skills--</option>
-</select>
-</div>
-</div>
+    <div class="form-group">
+    <label>Skills:<span
+    style="color:#3c8dbc;">&nbsp;*</span></label>
+    <select class="form-control" ng-hide="skilllist.length == 0" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+        <option value="">--Select Skills--</option>
+    </select>
+        <select class="form-control" ng-show="skilllist.length == 0" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+            <option value="" >--No Skill Set--</option>
+        </select>
+    </div>
+    </div>
 <div class="col-lg-2">
 <div class="form-group">
 <label>Rating:<span
@@ -1590,7 +1593,8 @@ Role
         <iframe width="100%" height="800px" src={{url}} frameborder="0" allowFullScreen="true"></iframe>
     </article>
         <article ng-if="userinfodata.RoleId==5">
-            <iframe width="100%" height="800px" src={{url}} frameborder="0" allowFullScreen="true"></iframe>
+           <iframe width="100%" height="800px" src={{url}} frameborder="0" allowFullScreen="true"></iframe> 
+       <!--    <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMTliNGIyMmYtZTY3Zi00NTY1LWI0YjUtYzlmMmUwMWFkYTBjIiwidCI6ImIyY2Y2OWQ0LWM2ZGYtNDVjMC05ZDYzLTVjOTQ5ZWRkZDUzMSJ9" frameborder="0" allowFullScreen="true"></iframe>-->
         </article>
 <article ng-if="userinfodata.RoleId==7 && userinfodata.BuId==1 ">
    <!-- <div ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 ">-->

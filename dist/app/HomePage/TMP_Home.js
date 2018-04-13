@@ -250,7 +250,9 @@ $http.get(ApiUrlPrefix + 'fetchstatusmasterlist').success(function (data) {
 $scope.getskilllist = function(a){
     $http.get(ApiUrlPrefix + 'fetchskillslist/'+a).success(function (data) {
     $scope.skilllist=data;
-
+    if (data == "No Data Found") {
+        $scope.skilllist = "";
+    }
     //console.log(data);
     },function(error){
     console.log(error);
