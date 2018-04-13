@@ -41,17 +41,19 @@ if($scope.StatusName== undefined && $scope.Description== undefined) {
     	alert("Please enter Status name");
 }else if($scope.Description== null || $scope.Description== undefined||$scope.Description==""){
     	alert("Please enter Description");
-} else {
+} else if($scope.Description.length>30){
+    alert("Description must be 30 digits");
+}
+else {
   var statuslist = {
     "StatusName": $scope.StatusName
     , "Description": $scope.Description
+  , "CreatedBy":$scope.userinfodata.Username
     };
     $http.post(ApiUrlPrefix + 'addstatusmasterbyadmin ', statuslist).then(function (response) {
     //  console.log(response);	
 	  $("#AddStatusModal").modal("hide");
-      alert("Status details added successfully ");
-	  
-	  
+        alert(response.data);
       $location.path( "/statusmaster" );
           },function(error){
       console.log(error);
@@ -82,8 +84,9 @@ $scope.updateStatus = function () {
     	alert("Please enter Status name");
 }else if($scope.status.Description== null || $scope.status.Description== undefined||$scope.status.Description==""){
     	alert("Please enter Description");
-}
-	
+} else if($scope.status.Description.length>30){
+        alert("Description must be 30 digits");
+    }
 else{
 	
 var updateStatus = {

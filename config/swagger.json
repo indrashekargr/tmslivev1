@@ -1068,6 +1068,44 @@
             }
         },
 
+
+        "/addrolemasterbyadmin": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addrolemasterbyadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addrolemasterbyadmin",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/addRole"
+                        }
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
         "/addtrackingemployee": {
             "post": {
                 "tags": [
@@ -1499,6 +1537,80 @@
                           }
                     }
                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/updaterolemasterbyadmin": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "updaterolemasterbyadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updateRoleMaster",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/updateRoleMaster"
+                        }
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/updatebumasterbyadmin": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "updatebumasterbyadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updateBuMaster",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/updateBuMaster"
+                        }
+                    }
+
                 ],
                 "responses": {
                     "200": {
@@ -2310,6 +2422,29 @@
                 "CreatedDate": {
                     "type": "string",
                     "format": "date-time"
+                },
+                "CreatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "addRole": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Description": {
+
+                    "type": "string"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "CreatedBy": {
+                    "type": "string"
                 }
             }
         },
@@ -2357,6 +2492,10 @@
         "Bu_Unit": {
             "type": "object",
             "properties": {
+                "Id": {
+                    "format": "int32",
+                    "type": "integer"
+                },
                 "buName": {
                     "type": "string"
                 },
@@ -2529,6 +2668,54 @@
                     "type": "string"
                 },
                 
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "updateRoleMaster": {
+            "type": "object",
+            "properties": {
+                "RoleID": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "ModifiedBy": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "updateBuMaster": {
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "buName": {
+                    "type": "string"
+                },
+                "ModifiedBy": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+
                 "ModifiedDate": {
                     "type": "string",
                     "format": "date-time"

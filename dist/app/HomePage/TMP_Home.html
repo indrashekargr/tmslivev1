@@ -127,6 +127,7 @@ style="color:#3c8dbc;">&nbsp;*</span></label>
 </div>
 </div>
 <div class="col-lg-2">
+<<<<<<< HEAD
     <div class="form-group">
     <label>Skills:<span
     style="color:#3c8dbc;">&nbsp;*</span></label>
@@ -138,6 +139,19 @@ style="color:#3c8dbc;">&nbsp;*</span></label>
         </select>
     </div>
     </div>
+=======
+<div class="form-group">
+<label>Skills:<span
+style="color:#3c8dbc;">&nbsp;*</span></label>
+<select class="form-control" ng-hide="skilllist.length == 0"  ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+    <option value="">--Select Skills--</option>
+</select>
+    <select class="form-control" ng-show="skilllist.length == 0" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+        <option value="" >--No Skill Set--</option>
+    </select>
+</div>
+</div>
+>>>>>>> 3e5a0ec65cfaf7cc699dda80d4c4e674434820f4
 <div class="col-lg-2">
 <div class="form-group">
 <label>Rating:<span
@@ -792,12 +806,12 @@ font-size: 110%;
 border-color: #393350;
 border-style: double;
 ">Project</th>
-<th style="width:150px;
+<!--<th style="width:150px;
 color: white;
 font-size: 110%;
 border-color: #393350;
 border-style: double;
-">Status</th>
+">Status</th>-->
 <th style="width:150px;
 color: white;
 font-size: 110%;
@@ -828,9 +842,9 @@ border-style: double;  ">{{track.CompanyName}}</td>
 <td style="width:150px;
 border-color: #ffffff;
 border-style: double;  ">{{track.ProjectName}}</td>
-<td style="width:150px;
-border-color: #ffffff;
-border-style: double;  ">{{track.type}}</td>
+<!--<td style="width:150px;
+border-color: #ffffff; -->
+<!--border-style: double;  ">{{track.type}}</td>-->
 <td style="width:150px;
 border-color: #ffffff;
 border-style: double;  ">{{track.FromDate}}</td>

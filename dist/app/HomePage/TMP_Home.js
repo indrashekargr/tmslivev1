@@ -52,6 +52,7 @@ window.$scope = $scope;
     $scope.reset  = function(){
         $http.get(ApiUrlPrefix + "fetchAllEmployeeDataByHR").success(function (data) {
             $scope.currentEmployeeList = data;
+
         });
     }
 
@@ -250,9 +251,16 @@ $http.get(ApiUrlPrefix + 'fetchstatusmasterlist').success(function (data) {
 $scope.getskilllist = function(a){
     $http.get(ApiUrlPrefix + 'fetchskillslist/'+a).success(function (data) {
     $scope.skilllist=data;
+
     if (data == "No Data Found") {
         $scope.skilllist = "";
     }
+
+
+        if (data == "No Data Found") {
+            $scope.skilllist = "";
+        }
+
     //console.log(data);
     },function(error){
     console.log(error);
@@ -426,8 +434,9 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
          });
         // $scope.skillUpdate(UserId,ci,fn,ln);
          $scope.trackUpdate(UserId,ci,fn,ln);
+
          }
-         } 
+         }
 
 //Fetch all resource skills data based on userId
 
