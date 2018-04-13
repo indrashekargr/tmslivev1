@@ -130,7 +130,7 @@ style="color:#3c8dbc;">&nbsp;*</span></label>
 <div class="form-group">
 <label>Skills:<span
 style="color:#3c8dbc;">&nbsp;*</span></label>
-<select class="form-control" ng-hide="skilllist.length == 0" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+<select class="form-control" ng-hide="skilllist.length == 0"  ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
     <option value="">--Select Skills--</option>
 </select>
     <select class="form-control" ng-show="skilllist.length == 0" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
@@ -792,12 +792,12 @@ font-size: 110%;
 border-color: #393350;
 border-style: double;
 ">Project</th>
-<th style="width:150px;
+<!--<th style="width:150px;
 color: white;
 font-size: 110%;
 border-color: #393350;
 border-style: double;
-">Status</th>
+">Status</th>-->
 <th style="width:150px;
 color: white;
 font-size: 110%;
@@ -828,9 +828,9 @@ border-style: double;  ">{{track.CompanyName}}</td>
 <td style="width:150px;
 border-color: #ffffff;
 border-style: double;  ">{{track.ProjectName}}</td>
-<td style="width:150px;
-border-color: #ffffff;
-border-style: double;  ">{{track.type}}</td>
+<!--<td style="width:150px;
+border-color: #ffffff; -->
+<!--border-style: double;  ">{{track.type}}</td>-->
 <td style="width:150px;
 border-color: #ffffff;
 border-style: double;  ">{{track.FromDate}}</td>

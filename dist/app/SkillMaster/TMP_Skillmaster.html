@@ -1,4 +1,36 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
+    .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+        color: #fff;
+        background-color: #061743;
+    }
+    .nav.nav-pills .active>a {
+        background-color: #061743;
+    }
+
+    a:focus, a:hover {
+        color: #202020;
+        text-decoration: underline;
+    }
+    a:focus, a:hover {
+        color: #202020;
+        text-decoration: underline;
+    }
+    a:active, a:hover {
+        outline: 0;
+    }
+    a {
+        outline: none!important;
+    }
+    a {
+        color: #40c0e8;
+        text-decoration: none;
+    }
+    a {
+        color: #40c0e8;
+        text-decoration: none;
+    }
 
     .modal-body {
         max-height: calc(100vh - 210px);
@@ -9,34 +41,47 @@
     #wrap {
         overflow: auto;
         height: 400px;
-        
-  
+
+
     }
     td {
-        background-color: #fff;       
-       
+        background-color: #fff;
+
     }
     .theadbackgroud{
-    background: #ddd;
-}
+        background: #ddd;
+    }
 </style>
 
 <div class="col-lg-12">
 
      <div class="col-lg-12" style="margin-top: 5px;margin-left: 22px;">
-        <a >
-            <!--<button class="btn btn-info pull-right MRTop" type="text" ng-click="showInputsArticleWithInput = !showInputsArticleWithInput"
+       <!-- <a >
+            &lt;!&ndash;<button class="btn btn-info pull-right MRTop" type="text" ng-click="showInputsArticleWithInput = !showInputsArticleWithInput"
                     ng-bind="showInputsArticleWithInput? 'Dashboard': 'Manage Employees'">
             </button>
             <button class="btn btn-info pull-right MRTop" ng-if="userinfodata.RoleId==5" style="margin-left: 1%;margin-right: 1%;"  ng-if="showInputsArticleWithInput = showInputsArticleWithInput" ng-click="allemployeeList()" title="Get from PCC Data"><i class="fa fa-database" aria-hidden="true"></i></button>
             </button>
             <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" data-toggle="modal" data-target="#FeedbackModal" title="Feedback"><i class="fa fa-comments-o" ></i></button>
-            </button>-->
+            </button>&ndash;&gt;
+
             <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="home" title="Dashboard"><i class="fa fa-home"></i></button>
             </button>
-
+            <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="statusmaster" title="Status Master"><i class="fa fa-street-view"></i></button>
+            </button>
+            <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="rolemaster" title="Role Master"><i class="fa fa-users"></i></button>
+            </button>
+            <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="bumaster" title="Business Unit Master"><i class="fa fa-institution"></i></button>
+            </button>
         </a>
-
+-->
+          <ul class="nav nav-pills nav-justified">
+           <li class="active"><a  ui-sref="skillmaster" data-toggle="pill"><i class="fa fa-desktop"></i>&nbsp;&nbsp;&nbsp;Skill Master</a></li>
+           <li><a ui-sref="statusmaster"><i class="fa fa-street-view"></i>&nbsp;&nbsp;&nbsp;Status Master</a></li>
+              <li><a ui-sref="bumaster" data-toggle="pill"><i class="fa fa-institution"></i>&nbsp;&nbsp;&nbsp;Business Unit Master</a></li>
+           <li><a ui-sref="rolemaster"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;Role Master</a></li>
+              <li><a ui-sref="home"><i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;Home</a></li>
+       </ul>
 
     </div>
 
@@ -58,12 +103,10 @@
         <img src="assets/images/icons/add.png" class="pull-right MRTop" data-toggle="tooltip" data-placement="top"
         title="Add Skill Category" data-original-title="Add Skill Category"></a>
 <!--<h5 class="text-center">Skill Category Master</h5>-->
-    <h5 class="text-center" style="font-size: 21px;color: black;margin-top: -4px;margin-left: 0px;">Skill Category Master</h5>
+    <h5 class="text-center" style="font-size: 21px;color: black;margin-top: -4px;margin-left: 0px;">Skill Category Master Data</h5>
 <div id="wrap">
 <table id="" class="table  table-hover">
-<thead class="theadbackgroud" style="
-    background: #061743;
-">
+<thead class="theadbackgroud" style="background: #44c2e8;">
 <tr>
 <th style="
     color: white;

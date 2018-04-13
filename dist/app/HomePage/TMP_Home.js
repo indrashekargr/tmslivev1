@@ -52,6 +52,7 @@ window.$scope = $scope;
     $scope.reset  = function(){
         $http.get(ApiUrlPrefix + "fetchAllEmployeeDataByHR").success(function (data) {
             $scope.currentEmployeeList = data;
+
         });
     }
 
@@ -428,8 +429,9 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
          });
         // $scope.skillUpdate(UserId,ci,fn,ln);
          $scope.trackUpdate(UserId,ci,fn,ln);
+
          }
-         } 
+         }
 
 //Fetch all resource skills data based on userId
 
