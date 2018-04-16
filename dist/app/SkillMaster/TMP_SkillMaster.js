@@ -92,8 +92,8 @@ $("#exampleModal").modal("show");
 } else if($scope.CategoryName== null || $scope.CategoryName== undefined||$scope.CategoryName==""){
 alert("Please enter Category name");
 }
-else if($scope.Description.length>30){
-    alert("Description must be 30 digits");
+else if($scope.Description.length>100){
+    alert("Description must be 100 digits");
 }
 else if($scope.Description== null || $scope.Description== undefined||$scope.Description==""){
 alert("Please enter Description");
@@ -141,8 +141,8 @@ alert("Please enter Category name");
 }else if($scope.category.Description== null || $scope.category.Description== undefined||$scope.category.Description==""){
 alert("Please enter Description");
 
-}else if($scope.category.Description.length>30){
-    alert("Description must be 30 digits");
+}else if($scope.category.Description.length>100){
+    alert("Description must be 100 digits");
 }
 else{
 
@@ -196,8 +196,8 @@ alert("Please enter all the mandatory fields");
 alert("Please enter Skill name");
 } else if($scope.Description== null || $scope.Description== undefined||$scope.Description==""){
 alert("Please enter Description");
-} else if($scope.Description.length>30){
-    alert("Description must be 30 digits");
+} else if($scope.Description.length>100){
+    alert("Description must be 100 digits");
 }
 
 else {
@@ -239,8 +239,8 @@ if($scope.sub.SkillName== null || $scope.sub.SkillName== undefined||$scope.sub.S
 alert("Please enter Skill name");
 } else if($scope.sub.Description== null || $scope.sub.Description== undefined||$scope.sub.Description==""){
     alert("Please enter Description");
-}else if($scope.sub.Description.length>30){
-    alert("Description must be 30 digits");
+}else if($scope.sub.Description.length>100){
+    alert("Description must be 100 digits");
 }
 else{
 var Subcategory = {

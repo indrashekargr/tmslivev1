@@ -88,7 +88,7 @@ ng-bind="showInputsArticleWithInput? 'Dashboard': 'Manage Employees'">
 </button>
 <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" data-toggle="modal" data-target="#FeedbackModal" title="Feedback"><i class="fa fa-comments-o" ></i></button>
 </button>
-    <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="skillmaster" title="Administration"><i class="fa fa-cog"></i></button>
+    <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ng-if="userinfodata.RoleId==5" ui-sref="skillmaster" title="Administration"><i class="fa fa-cog"></i></button>
     </button>
    <!-- <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="feedback" title="Feedback"><i class="fa fa-comments-o" ></i></button>
     </button>-->
@@ -204,8 +204,6 @@ Filter</button>
 </div>
 
 </div> </div><div class="col-lg-12">
-
-
 <article ng-if="showInputsArticleWithInput">
     <div class="wrapper">
     <div id="wrap">
@@ -340,28 +338,29 @@ title="Tracking Profile" aria-hidden="true"></i>
 </i>&nbsp; &nbsp; &nbsp;</a> -->
 </td>
 </tr>
-<tr ng-if="userinfodata.RoleId==7" ng-show="filteredEmployee.length == 0"
-    style="border:1px solid #e7e7e7;">
-    <td colspan="15" style="font-weight: bold;">No Data found</td>
-</tr>
-</tbody>
 
+</tbody>
+            <tbody style="height:320px;margin-top: -325px;">
+
+            <tr style="
+border-bottom: 1px solid #eee;
+" ng-if="userinfodata.RoleId==7"  ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'">
    <!-- buEmployeeList
     ng-repeat="user in filteredEmployee = (currentEmployeeList | filter : searchText) | orderBy:'EmployeeId'"-->
-    <tbody ng-if="userinfodata.RoleId==7"  ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'" style="border:1px solid #e7e7e7;">
+   <!-- <tbody ng-if="userinfodata.RoleId==7"  ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'" style="border:1px solid #e7e7e7;">-->
 <!--<tbody ng-if="userinfodata.RoleId==7" ng-repeat="user in buEmployeeList | filter:searchText | orderBy:'EmployeeId'" style="border:1px solid #e7e7e7;"> -->
-<td>{{$index+1}}</td>
-<td>{{user.EmployeeId}}</td>
-<td>{{user.FirstName}} &nbsp; {{user.LastName}}</td>
-<td><i class="fa fa-phone" aria-hidden="true"></i>{{user.ContactNo}}</br><i class="fa fa-envelope" aria-hidden="true"></i>{{user.Email}}</td>
-<td>{{user.reportingmanager}}</td>
+<td style="width:10%;">{{$index+1}}</td>
+<td style="width:10%;">{{user.EmployeeId}}</td>
+<td style="width:10%;">{{user.FirstName}} &nbsp; {{user.LastName}}</td>
+<td style="width:19%;"><i class="fa fa-phone" aria-hidden="true"></i>{{user.ContactNo}}</br><i class="fa fa-envelope" aria-hidden="true"></i>{{user.Email}}</td>
+<td style="width:10%;">{{user.reportingmanager}}</td>
 
-<td>{{user.totalExperience}}</td>
-<td>
+<td style="width:10%;">{{user.totalExperience}}</td>
+<td style="width:10%;">
 <a data-toggle="modal" ng-click="skillUpdate(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.RoleID)"
 title="view more skills" data-target="#ViewSkillsModal" data-whatever="@mdo">{{user.PrimarySkill}}</a>
 </td>
-<td>
+<td style="width:15%;">
 <a href="" data-toggle="modal" data-target=".bs-example-modal-lg"
 style="text-decoration: none;">
 <img src="assets/images/icons/edit icon.png" data-toggle="tooltip"
@@ -379,8 +378,14 @@ title="Tracking Profile" aria-hidden="true"></i>
 </i>&nbsp; &nbsp; &nbsp;</a>
 
 </td>
-</tbody>
     </tr>
+    <tr ng-if="userinfodata.RoleId==7" ng-show="buEmployeeList.length == 0"
+        style="border:1px solid #e7e7e7;">
+        <td colspan="15" style="font-weight: bold;margin-left: 41%;position: absolute;">No Data found</td>
+    </tr>
+
+</tbody>
+
 </table>
         <input type="text" placeholder="Search" ng-model='searchText' class="input-md form-control" style="
 padding: 0px 0px 0px 0px; margin-top:-1%; width: 200px;"></div></div>
@@ -1391,12 +1396,12 @@ aria-labelledby="myLargeModalLabel">
 
 <div class="modal-dialog modal-md" role="document">
 
-<div class="modal-content">
+<div class="modal-content" style="width: 141%;">
 
 <div class="">
 <section>
 <div class="">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="close">
         <span aria-hidden="true">&times;</span>
     </button>
 <h5 class="text-center"style="

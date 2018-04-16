@@ -166,7 +166,13 @@ else{
     {
 
         console.log(q+" "+r+" "+s+ " "+t);
-        if(q== undefined && r== undefined && s== undefined && t== undefined){
+        if(s== null ||s== undefined|| s=="") {
+            s="0";
+        }
+        if(t== null ||t== undefined|| t=="") {
+            t="0";
+        }
+        if(q== undefined && r== undefined){
             alert("Please select all the mandatory fields");
         }
         else if(q== null || q== undefined||q==""){
@@ -175,36 +181,65 @@ else{
         else if(r== null || r== undefined||r==""){
             alert("Please select Skill");
         }
-        else if(s== null ||s== undefined|| s==""){
-            alert("Please select Rating");
-        }
-        else if(t== null || t== undefined||t==""){
-            alert("Please select Availability");
-        }
         else{
 
 //$http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForManager/CategoryId='+q + "/SkillId="+ r + "/Rating=" + s + "/AvailabilityStatus=" + t + "/ReportingManager=" +$scope.userinfodata.EmployeeId).success(function (data) {
-            $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForManager/CategoryId='+q + "/SkillId="+ r + "/Rating=" + s + "/Availability="+ t + "/ReportingManager=" +$scope.userinfodata.EmployeeId).success(function (data) {
+           /* $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForManager/CategoryId='+q + "/SkillId="+ r + "/Rating=" + s + "/Availability="+ t + "/ReportingManager=" +$scope.userinfodata.EmployeeId).success(function (data) {
                 $scope.managerEmployeeList = data;
                // $scope.buEmployeeList = data;
             },function(data){
                 console.log(data);
             },function(error){
                 console.log(error);
-            });
+            });*/
 
-            $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForBU/CategoryId='+q + "/SkillId="+ r + "/Rating=" + s + "/Availability="+ t + "/BuId=" +$scope.userinfodata.BuId).success(function (data) {
-               // $scope.managerEmployeeList = data;
-                $scope.buEmployeeList = data;
-            },function(data){
-                console.log(data);
-            },function(error){
-                console.log(error);
-            });
+            if(q != null && r !=null &&  s != "0"  && t !=null) {
+                $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForBU/CategoryId=' + q + "/SkillId=" + r + "/Rating=" + s + "/Availability=" + t + "/BuId=" + $scope.userinfodata.BuId).success(function (data) {
+                    // $scope.managerEmployeeList = data;
+                    $scope.buEmployeeList = data;
+                }, function (data) {
+                    console.log(data);
+                }, function (error) {
+                    console.log(error);
+                });
+            }
 
+            if(q !=null  && r !=null && s == "0" && t !=null){
+                console.log($scope.rating);
+                $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllRatingForBU/CategoryId=' + q + "/SkillId=" + r + "/Rating=" + s + "/Availability=" + t + "/BuId=" + $scope.userinfodata.BuId).success(function (data) {
+                    $scope.buEmployeeList = data;
+                },function(data){
+                    console.log(data);
+                },function(error){
+                    console.log(error);
+                });
+            }
 
+            if(q !=null  && r !=null && s !=null && t =="0"){
+                console.log($scope.rating);
+                $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllStatusForBU/CategoryId='+q + "/SkillId="+ r + "/Rating= " +s +"/Availability="+t + "/BuId=" + $scope.userinfodata.BuId).success(function (data) {
+                    $scope.buEmployeeList = data;
+
+                },function(data){
+                    console.log(data);
+                },function(error){
+                    console.log(error);
+                });
+            }
+
+            if(q !=null  && r !=null && s == "0" && t =="0"){
+                console.log(s);
+                console.log(t);
+                $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllRatingAndStatusForBU/CategoryId='+q + "/SkillId="+ r + "/Rating= " +s +"/Availability="+t + "/BuId=" + $scope.userinfodata.BuId).success(function (data) {
+                    $scope.buEmployeeList = data;
+
+                },function(data){
+                    console.log(data);
+                },function(error){
+                    console.log(error);
+                });
+            }
         }
-
     }
 
 //Fetch all employee tracking skills for HR
@@ -366,9 +401,10 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
     // c = $filter('date')($scope.FromDate, 'yyyy-MM-dd');
     // e = $filter('date')($scope.ToDate, 'yyyy-MM-dd');
  
-     $("#AddTrakingModal").modal("show");
+
      if(a == undefined && b== undefined){
      alert("Please select all the mandatory fields");
+         $("#AddTrakingModal").modal("show");
      }
      else if(a== null ||a== undefined||a==""){
      alert("Please enter Project Name");
@@ -421,8 +457,6 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
          $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
              $scope.trackdata = data;
              console.log($scope.trackdata);
-             //$scope.AddTrackClear();
-             //console.log(data);
          });
      }  if (newTracking.ToDate =! null && newTracking.ToDate < newTracking.FromDate) {
              alert('start date should be less than end date');
@@ -608,43 +642,7 @@ if ($scope.RoleID == "null") {
 $scope.roleid = null;
 }
 }
-/*
-//Fetch all roles in the employee updation
-$http.get(ApiUrlPrefix + "fetchqualificationList").success(function (data) {
-    $scope.qualifications=data;
-    });
-    
-    $scope.qualificationchanged = function () {
-    $http.get(ApiUrlPrefix + "fetchqualificationList").success(function (data) {
-    angular.forEach(data, function (obj) {
-    if (obj.Id == $scope.Id) {
-    $scope.id = obj.Id;
-    }
-    });
-    });
-    if ($scope.Id == "null") {
-    $scope.id = null;
-    }
-    }
 
-    //Fetch all designation in the employee updation
-$http.get(ApiUrlPrefix + "fetchdesignationlist").success(function (data) {
-    $scope.designations=data;
-    });
-    
-    $scope.designationchanged = function () {
-    $http.get(ApiUrlPrefix + "fetchdesignationlist").success(function (data) {
-    angular.forEach(data, function (obj) {
-    if (obj.Id == $scope.Id) {
-    $scope.id = obj.Id;
-    }
-    });
-    });
-    if ($scope.Id == "null") {
-    $scope.id = null;
-    }
-    }
- */
 //Fetch all reporting heads in the employee updation
 $http.get(ApiUrlPrefix + "fetchAllReportingHeads").success(function (data) {
 $scope.managers=data;

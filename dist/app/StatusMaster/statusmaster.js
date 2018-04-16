@@ -41,8 +41,8 @@ if($scope.StatusName== undefined && $scope.Description== undefined) {
     	alert("Please enter Status name");
 }else if($scope.Description== null || $scope.Description== undefined||$scope.Description==""){
     	alert("Please enter Description");
-} else if($scope.Description.length>30){
-    alert("Description must be 30 digits");
+} else if($scope.Description.length>100){
+    alert("Description must be 100 digits");
 }
 else {
   var statuslist = {
@@ -84,8 +84,8 @@ $scope.updateStatus = function () {
     	alert("Please enter Status name");
 }else if($scope.status.Description== null || $scope.status.Description== undefined||$scope.status.Description==""){
     	alert("Please enter Description");
-} else if($scope.status.Description.length>30){
-        alert("Description must be 30 digits");
+} else if($scope.status.Description.length>100){
+        alert("Description must be 100 digits");
     }
 else{
 	

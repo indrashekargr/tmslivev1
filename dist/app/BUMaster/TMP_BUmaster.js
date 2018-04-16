@@ -25,8 +25,8 @@ window.$scope = $scope;
             alert("Please enter Business unit name");
         }else if($scope.Description== null || $scope.Description== undefined||$scope.Description==""){
             alert("Please enter Description");
-        } else if($scope.Description.length>30){
-            alert("Description must be 30 digits");
+        } else if($scope.Description.length>100){
+            alert("Description must be 100 digits");
         }
         else {
             var bulist = {
@@ -69,8 +69,8 @@ window.$scope = $scope;
                 alert("Please enter Business Unit name");
             }else if($scope.bu.Description== null || $scope.bu.Description== undefined||$scope.bu.Description==""){
                 alert("Please enter Description");
-            } else if($scope.bu.Description.length>30){
-                alert("Description must be 30 digits");
+            } else if($scope.bu.Description.length>100){
+                alert("Description must be 100 digits");
             }
             else{
 

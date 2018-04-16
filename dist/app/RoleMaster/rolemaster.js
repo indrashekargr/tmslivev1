@@ -23,8 +23,8 @@ getRoleList();
             alert("Please enter Role name");
         }else if($scope.Description== null || $scope.Description== undefined||$scope.Description==""){
             alert("Please enter Description");
-        } else if($scope.Description.length>30){
-            alert("Description must be 30 digits");
+        } else if($scope.Description.length>100){
+            alert("Description must be 100 digits");
         }
         else {
             var rolelist = {
@@ -68,8 +68,8 @@ getRoleList();
                 alert("Please enter Role name");
             }else if($scope.role.Description== null || $scope.role.Description== undefined||$scope.role.Description==""){
                 alert("Please enter Description");
-            } else if($scope.role.Description.length>30){
-                alert("Description must be 30 digits");
+            } else if($scope.role.Description.length>100){
+                alert("Description must be 100 digits");
             }
             else{
 

@@ -196,12 +196,12 @@ this.querySelector("thead").style.transform = translate;
 
 $("textarea").on('change paste keyup', function () {
     var currText = $(this).val();
-    if (currText.length > 30) {
+    if (currText.length > 100) {
         var text = $(this).text();
-        $(this).text(text.substr(0, 30));
-        alert("You have reached the maximum character length 30");
+        $(this).text(text.substr(0, 100));
+        alert("You have reached the maximum character length 100");
         return false;
-    } else if (currText.length < 30){
+    } else if (currText.length < 100){
         return true;
     }
 });
