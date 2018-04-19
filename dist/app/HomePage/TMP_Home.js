@@ -769,7 +769,7 @@ $scope.editTracking = function (a,b,c,d,e,f,g,h,i){
     $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+a).success(function (data) {
         $scope.trackdata=data;
         
-        $scope.trackdata[0].addAction = 0;
+     /*   $scope.trackdata[0].addAction = 0;
 console.log($scope.trackdata.length);
     for(i=0;i < $scope.trackdata.length;i++ ){
 
@@ -779,7 +779,7 @@ console.log($scope.trackdata.length);
 
         }
         
-    }
+    }*/
     
     console.log( $scope.trackdata);
     
@@ -943,7 +943,7 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
         "ProjectName": ProjectName,
         "CompanyName": CompanyName,
         "FromDate": new Date(FromDate),
-        "ToDate": ToDate,
+        "ToDate": new Date(ToDate),
         "Id": Id,
         "UserId": UserId
     };
@@ -960,7 +960,11 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
 
         if ($scope.track.ToDate == null || $scope.track.ToDate == undefined || $scope.track.ToDate == "") {
             $scope.track.FromDate = $filter('date')($scope.track.FromDate, 'yyyy-MM-dd');
+
             //alert("Please select To date");
+
+
+
             var track = {
                 "ProjectName": $scope.track.ProjectName,
                 "CompanyName": $scope.track.CompanyName,
@@ -1001,7 +1005,7 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
             $http.put(ApiUrlPrefix + 'upadateemployeetracking', track).success(function (data) {
                 //console.log(data);
                 if(track.FromDate < track.ToDate){
-                alert("Project closed successfully");
+                alert("Project updated successfully");
 
 
                 $("#EditTrackModal").modal("hide");
