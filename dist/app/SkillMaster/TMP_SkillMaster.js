@@ -1,7 +1,6 @@
 var ApiUrlPrefix = "/";
 app.controller("SkillMasterCtrl", function ($rootScope, loginAuthentication, $scope, $http, $state, $stateParams, $interval, $window, $location, $timeout, $filter) {
 $scope.userinfodata = loginAuthentication.getLoggedInUserInfo();
-//console.log($scope.userinfodata);
 $scope.state = $state;
 window.$scope = $scope;
 var CategoryId=null;
@@ -24,29 +23,6 @@ var CategoryId=null;
             });
         }
     }
-
-    //Delete Sub Skill Category Master Data
-    $scope.deleteSubCategory = function(SkillId) {
-        if (confirm("Are you sure you want to delete this Skill ID record?")) {
-            var deleteSkillCategory = {
-                "SkillId": SkillId,
-                 "ModifiedBy": $scope.userinfodata.Username
-            };
-            //$scope.CategoryID = CategoryID;
-            console.log(CategoryId);
-            $http.put(ApiUrlPrefix + 'deleteSubSkillCategoryByAdmin', deleteSkillCategory).then(function (response) {
-                alert(response.data);
-                $http.get(ApiUrlPrefix + "fetchskillslist/" + $scope.CategoryID).success(function (data) {
-                    $scope.getCategorySubList = data;
-                });
-            },function(error){
-                console.log(error);
-                $scope.error = "An error has occured while deleting! " + data;
-            });
-        }
-    }
-
-
 
 //Fetch All category list for admin
 getCategoryList();

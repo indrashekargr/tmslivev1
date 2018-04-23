@@ -5,7 +5,6 @@ $scope.userinfodata = loginAuthentication.getLoggedInUserInfo();
 console.log($scope.userinfodata);
 console.log($scope.userinfodata.EmployeeId);
 console.log($scope.userinfodata.BuId);
-//console.log($scope.userinfodata.currentUser);
 $scope.state = $state;
 window.$scope = $scope;
 
@@ -31,12 +30,9 @@ window.$scope = $scope;
         if (employeedata== true){
             alert("Started processing...");
             $http.get(ApiUrlPrefix + "externalemployeeRepository").success(function (data) {
-                // $scope.allemployeeList = data;
-                // console.log( $scope.allemployeeList);
                 console.log(data);
             })
         }else{
-            //alert("No update from PCC Application");
             return false;
         }
     }
@@ -67,10 +63,6 @@ window.$scope = $scope;
 $scope.searchskill = function(q,r,s,t)
 {
     $scope.ratings = [{"RatingID" : 1},{"RatingID" : 2},{"RatingID" : 3},{"RatingID" : 4},{"RatingID" : 5}];
-   // $scope.selected = false;
-   /* $scope.selectAll = function() {
-        $scope.selectedValues = $scope.values;
-      }*/
 console.log(q+" "+r+" "+s+ " "+t);
     if(s== null ||s== undefined|| s=="") {
         s="0";
@@ -87,15 +79,7 @@ alert("Please select Category");
 else if(r== null || r== undefined||r==""){
 alert("Please select Skill"); 
 }
-/*else if(s== null ||s== undefined|| s=="") {
-    s="0";
-}*/
-/*else if(t== null ||t== undefined|| t==""){
-alert("Please select Availability");
-}*/
-/*else if(t== null || t== undefined||t==""){
-alert("Please select Availability");
-} */
+
 else{
 
     if(q != null && r !=null &&  s != "0"  && t !=null){
@@ -144,18 +128,6 @@ else{
             console.log(error);
         });
     }
-
-/*if( $scope.ratings){
-    $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllRatingForHR/CategoryId='+q + "/SkillId="+ r  +"/Availability="+t).success(function (data) {
-       // $scope.employeedata=data;
-       $scope.managerEmployeeList = data;
-       $scope.currentEmployeeList = data;
-        },function(data){
-        console.log(data);
-        },function(error){
-        console.log(error);
-        }); 
-    } */
 }
 
 }
@@ -182,16 +154,6 @@ else{
             alert("Please select Skill");
         }
         else{
-
-//$http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForManager/CategoryId='+q + "/SkillId="+ r + "/Rating=" + s + "/AvailabilityStatus=" + t + "/ReportingManager=" +$scope.userinfodata.EmployeeId).success(function (data) {
-           /* $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForManager/CategoryId='+q + "/SkillId="+ r + "/Rating=" + s + "/Availability="+ t + "/ReportingManager=" +$scope.userinfodata.EmployeeId).success(function (data) {
-                $scope.managerEmployeeList = data;
-               // $scope.buEmployeeList = data;
-            },function(data){
-                console.log(data);
-            },function(error){
-                console.log(error);
-            });*/
 
             if(q != null && r !=null &&  s != "0"  && t !=null) {
                 $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForBU/CategoryId=' + q + "/SkillId=" + r + "/Rating=" + s + "/Availability=" + t + "/BuId=" + $scope.userinfodata.BuId).success(function (data) {
@@ -334,10 +296,8 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
     $scope.CurEmployeeId =ci ;
     $scope.Employee_First_Name=fn;
     $scope.Employee_Last_Name =ln;
-    
-    //console.log(newSkills);
+
     $http.post(ApiUrlPrefix + 'addEmployeeResourceSkillsByHR ', newSkills).then(function (response) {
-    //console.log(response);	
     alert(response.data);
     $scope.AddResourceClear();
     $("#AddSkillModal").modal("hide");
@@ -391,16 +351,8 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
         }
     }
 
-   /* $scope.AddFeedbackClear = function () {
-        $scope.Type = "";
-        $scope.Details = "";
-    }*/
-
   // Add Employee Tracking Profile
   $scope.addTracking = function(a,b,c,d,ci,fn,ln) {
-    // c = $filter('date')($scope.FromDate, 'yyyy-MM-dd');
-    // e = $filter('date')($scope.ToDate, 'yyyy-MM-dd');
- 
 
      if(a == undefined && b== undefined){
      alert("Please select all the mandatory fields");
@@ -409,9 +361,7 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
      else if(a== null ||a== undefined||a==""){
      alert("Please enter Project Name");
      }
-     /*else if(e== null || e== undefined||e==""){
-         alert("Please Select Availability Type");
-     }*/
+
      else if(b== null || b== undefined||b==""){
      alert("Please enter Company Name");
      }
@@ -439,10 +389,9 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
    $scope.CurEmployeeId =ci ;
      $scope.Employee_First_Name=fn;
      $scope.Employee_Last_Name =ln;
-     
-     //console.log(newSkills);
+
      $http.post(ApiUrlPrefix + 'addtrackingemployee ', newTracking).then(function (response) {
-         //console.log(response);
+
          if (response.toDate == null) {
              response.toDate == '';
          } else {
@@ -450,8 +399,6 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
          }
          if (newTracking.ToDate == null && newTracking.FromDate != null|| newTracking.ToDate != null && new Date(newTracking.ToDate) > new Date(newTracking.FromDate) && newTracking.FromDate != null){
              alert("Employee Tracking data added successfully");
-         // $location.path( "/home" );
-         //alert(response.data);
 
          $("#AddTrakingModal").modal("hide");
          $http.get(ApiUrlPrefix + 'fetchemployeetracking/' + UserId).success(function (data) {
@@ -516,7 +463,6 @@ $scope.skillUpdate = function (a,b,c,d,i){
 
     }
     $scope.AddTrackClear = function () {
-        // $scope.trackUpdate={}
     }
 //Edit Employee Resource skills based on userId
 $scope.updateskill= function (a,b,c,d,e,j,w)	{
@@ -529,9 +475,7 @@ $scope.updateskill= function (a,b,c,d,e,j,w)	{
     $scope.CurEmployeeId = e;
     $scope.Employee_First_Name=j;
     $scope.Employee_Last_Name=w;
-    
-    //console.log($scope.Employee_First_Name);
-    //console.log($scope.skill);
+
     $scope.editskill= function (f)
     {
     if(f == null || f == undefined || f == ""){
@@ -545,14 +489,13 @@ $scope.updateskill= function (a,b,c,d,e,j,w)	{
     
      
     }
-    //console.log(skill);
+
     $http.put(ApiUrlPrefix + 'updateEmployeeResourceSkillsByHR', skill).success(function (data) {
-    //console.log(data);
+
     alert(data);
     $("#EditSkillModal").modal("hide");
     $http.get(ApiUrlPrefix + "fetchResourceSkillDetailsBasedOnUser/" +UserId).success(function (data) {
     $scope.skilldata = data;
-    //alert("Updated successfully!!"); 
     
     });
     }).error(function (data) {
@@ -573,16 +516,13 @@ $scope.updateskill= function (a,b,c,d,e,j,w)	{
     $scope.CurEmployeeId =ei ;
     $scope.Employee_First_Name=fn;
     $scope.Employee_Last_Name =ln;
-    
-    console.log(e); 
-    //console.log(UserId);
-    //console.log(deleteSkills);
+    console.log(e);
     $http.put(ApiUrlPrefix + 'deleteEmployeeResourceSkillsByHR', deleteSkills).then(function (response) {
     //console.log(response);	
     alert(response.data);
     $http.get(ApiUrlPrefix + "fetchResourceSkillDetailsBasedOnUser/" +UserId).success(function (data) {
         $scope.skilldata = data;
-        //alert("Updated successfully!!"); 
+
         
         });
     },function(error){
@@ -599,7 +539,7 @@ function employeeManagerList() {
 $http.get(ApiUrlPrefix + "fetchEmployeeMasterdetailsByManager/" + $scope.userinfodata.EmployeeId).success(function (response) {
 $scope.managerEmployeeList = response;
 
-//console.log(response);
+
 });
 }
 employeeManagerList();
@@ -768,22 +708,7 @@ $scope.editTracking = function (a,b,c,d,e,f,g,h,i){
     //$scope.Role=i;
     $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+a).success(function (data) {
         $scope.trackdata=data;
-        
-     /*   $scope.trackdata[0].addAction = 0;
-console.log($scope.trackdata.length);
-    for(i=0;i < $scope.trackdata.length;i++ ){
 
-        if($scope.trackdata[i].Action == 1){
-            $scope.trackdata[0].addAction = 1
-
-
-        }
-        
-    }*/
-    
-    console.log( $scope.trackdata);
-    
-    //console.log(data);
     },function(data){
     console.log(data);
     },function(error){
@@ -812,74 +737,24 @@ $("#EditTrackModal").modal("hide");
  $scope.employee.DateOfBirth = new Date($scope.employee.DateOfBirth);
 $scope.employee.DateOfJoining = new Date($scope.employee.DateOfJoining);
 
-/*if($scope.employee.DateOfLeaving!=null){
-
-$scope.employee.DateOfLeaving = new Date($scope.employee.DateOfLeaving);
-} */
-
-
-//console.log(response);
-//console.log($scope.employee.ReportingManager);
-
 });
 
 
 $scope.updateEmployee = function () {
 
-  /*   $scope.firstDate = $filter('date')($scope.employee.DateOfBirth, 'yyyy-MM-dd');
-     $scope.secondDate = $filter('date')($scope.employee.DateOfJoining, 'yyyy-MM-dd');*/
-    // $scope.thirdDate = $filter('date')($scope.employee.DateOfLeaving, 'yyyy-MM-dd');
-
-    // console.log($scope.firstDate);
-	 /*if($scope.employee.ContactNo.length<10){
-        alert("Contact Number must be 10 digits");
-    } else if($scope.employee.EmployeeId== null || $scope.employee.EmployeeId== undefined||$scope.employee.EmployeeId==""){
-    	alert("Please enter Employee Id");
-    } else if($scope.employee.RoleId== null || $scope.employee.RoleId== undefined||$scope.employee.RoleId==""){
-    	alert("Please select Role"); */
-    /*} else if($scope.employee.BuId== null || $scope.employee.BuId== undefined||$scope.employee.BuId==""){
-    	alert("Please select Business Unit");
-    
-    }} else if($scope.employee.ContactNo== null || $scope.employee.ContactNo== undefined||$scope.employee.ContactNo==""){
-    	alert("Please enter Contact No.");
-    /*}else if($scope.employee.PriorExprience== null || $scope.employee.PriorExprience== undefined||$scope.employee.PriorExprience==""){
-    	        alert("Please enter Prior Exprience");*/
-   /* } else if(i== null || i== undefined||i==""){
-    	alert("Please select Availability Status"); */
-   /* } else if($scope.firstDate== null || $scope.firstDate== undefined||$scope.firstDate==""){
-    	alert("Please enter Date of Birth");
-    } else if($scope.secondDate== null || $scope.secondDate== undefined||$scope.secondDate==""){
-    	alert("Please enter Date of Joining");
-    } else */ if($scope.employee.PrimarySkill== null || $scope.employee.PrimarySkill== undefined|| $scope.employee.PrimarySkill==""){
+  if($scope.employee.PrimarySkill== null || $scope.employee.PrimarySkill== undefined|| $scope.employee.PrimarySkill==""){
     	alert("Please select Primary Skill");
-    } /*else if($scope.employee.FirstName== null || $scope.employee.FirstName== undefined||$scope.employee.FirstName==""){
-        alert("Please enter First Name");
-   }*/
-   /*else if($scope.employee.Password== null || $scope.employee.Password== undefined||$scope.employee.Password==""){
-        alert("Please enter Password");
-   } */
+    }
     else {
 
 var employee = {
-/*"FirstName": $scope.employee.FirstName,*/
 "EmployeeId": $scope.employee.EmployeeId,
-/*"LastName" : $scope.employee.LastName,*/
-/*"BuId":$scope.employee.BuId,*/
-//"ContactNo":$scope.employee.ContactNo,
-/*"PriorExprience":$scope.employee.PriorExprience,*/
-//"AvailabilityStatus":i,
-/*"DateOfBirth":$scope.firstDate,
-"DateOfJoining":$scope.secondDate,*/
-//"DateOfLeaving":$scope.thirdDate,
-//"ProfilePhoto":m,
 "RoleId":$scope.employee.RoleId,
 "PrimarySkill":$scope.employee.PrimarySkill,
-/*"ReportingManager":$scope.employee.ReportingManager,*/
 "integraExperience":$scope.employee.integraExperience,
 "ModifiedBy":$scope.userinfodata.Username,
-//"Password":$scope.employee.Password,
 "Availability":$scope.employee.Availability,
-    "buid":$scope.employee.buid,
+"buid":$scope.employee.buid,
 "IsReportingHead":$scope.employee.IsReportingHead
 };
 
@@ -952,17 +827,12 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
     $scope.Employee_First_Name = Employee_First_Name;
     $scope.Employee_Last_Name = Employee_Last_Name;
 
-    //console.log($scope.Employee_First_Name);
     console.log($scope.track);
     $scope.editTrackingProject = function (Id, UserId) {
 
-        //$scope.firstDate = $filter('date')($scope.track.ToDate, 'yyyy-MM-dd');
 
         if ($scope.track.ToDate == null || $scope.track.ToDate == undefined || $scope.track.ToDate == "") {
             $scope.track.FromDate = $filter('date')($scope.track.FromDate, 'yyyy-MM-dd');
-
-            //alert("Please select To date");
-
 
 
             var track = {
@@ -1023,26 +893,6 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
         }
         /*}*/
     }
-}
-
-// Deleting Employee record based on Employee ID in the home 
-$scope.deleteEmployeeProfile = function (EmployeeId) {
-if (confirm("Are you sure you want to delete this employee record?")) {
-var delEmployeeProfile = {
-"EmployeeId": EmployeeId
-};
-$http.put(ApiUrlPrefix + 'deleteEmployeeMasterdetailByHR', delEmployeeProfile).success(function (data) {
-alert("Successfully deleted employee details for Employee ID " +EmployeeId);
-
-$http.get(ApiUrlPrefix + "fetchAllEmployeeDataByHR").success(function (data) {
-$scope.currentEmployeeList = data;
-
-
-});
-}).error(function (data) {
-$scope.error = "An error has occured while deleting! " + data;                
-});
-}  
 }
 
 $scope.Clear = function () {
