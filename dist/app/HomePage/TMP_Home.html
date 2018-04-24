@@ -349,9 +349,11 @@ border-bottom: 1px solid #eee;
                         </tbody>
                         <tbody style="height:320px;margin-top: -325px;">
 
+
+
                         <tr style="
 border-bottom: 1px solid #eee;
-" ng-if="userinfodata.RoleId==7"  ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'">
+" ng-if="userinfodata.RoleId==7"   ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'">
                             <!-- buEmployeeList
                              ng-repeat="user in filteredEmployee = (currentEmployeeList | filter : searchText) | orderBy:'EmployeeId'"-->
                             <!-- <tbody ng-if="userinfodata.RoleId==7"  ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'" style="border:1px solid #e7e7e7;">-->
@@ -386,17 +388,12 @@ border-bottom: 1px solid #eee;
 
                         </td>
                         </tr>
-                        <tr ng-if="userinfodata.RoleId==7" ng-show="buEmployeeList.length == 0"
+                        <tr ng-show="filteredEmployee.length == 0"
                             style="border:1px solid #e7e7e7;">
                             <td colspan="15" style="font-weight: bold;margin-left: 41%;position: absolute;">No Data found</td>
                         </tr>
-
-                        <tr ng-if="userinfodata.RoleId==7" ng-show=" filter : searchText.length == 0"
-                            style="border:1px solid #e7e7e7;">
-                            <td colspan="15" style="font-weight: bold;margin-left: 41%;position: absolute;">No Data found</td>
-                        </tr>
-
-
+                        </tbody>
+                        <tbody>
                         </tbody>
 
                     </table>
