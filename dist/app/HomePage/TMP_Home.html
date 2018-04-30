@@ -95,7 +95,7 @@ margin-left: 491px;
                     </button>
                     <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" data-toggle="modal" data-target="#FeedbackModal" title="Feedback"><i class="fa fa-comments-o" ></i></button>
                     </button>
-                    <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ng-if="userinfodata.RoleId==5" ui-sref="skillmaster" title="Administration"><i class="fa fa-cog"></i></button>
+                    <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ng-if="userinfodata.RoleId==5 && userinfodata.adminacess==1" ui-sref="skillmaster" title="Administration"><i class="fa fa-cog"></i></button>
                     </button>
                     <!-- <button class="btn btn-info pull-right MRTop"  style="margin-left: 1%;margin-right: 1%;" ui-sref="feedback" title="Feedback"><i class="fa fa-comments-o" ></i></button>
                      </button>-->
@@ -191,14 +191,20 @@ margin-left: 491px;
                                             ng-click="reset()"><i class="fa fa-refresh"></i>
                                         Refresh</button>
 
-                                    <button ng-if="userinfodata.RoleId==3 || userinfodata.RoleId==2 || userinfodata.RoleId==7" type="submit" ng-click="searchskillformanager(category,skill,rating,Availability)"
+                                    <button ng-if="userinfodata.RoleId==2 || userinfodata.RoleId==7" type="submit" ng-click="searchskillformanager(category,skill,rating,Availability)"
+                                            class="mb-sm btn-lg btn btn-primary btn-outline "> <i class="fa fa-filter" aria-hidden="true"></i>
+                                        Filter</button>
+                                    <button ng-if="userinfodata.RoleId==3" type="submit" ng-click="searchskillforreportingmanager(category,skill,rating,Availability)"
                                             class="mb-sm btn-lg btn btn-primary btn-outline "> <i class="fa fa-filter" aria-hidden="true"></i>
                                         Filter</button>
                                     <button ng-if="userinfodata.RoleId==7" class="mb-sm btn-lg btn btn-primary btn-outline"
                                             type="reset"
                                             ng-click="resetbu()"><i class="fa fa-refresh"></i>
                                         Refresh</button>
-
+                                    <button ng-if="userinfodata.RoleId==3" class="mb-sm btn-lg btn btn-primary btn-outline"
+                                            type="reset"
+                                            ng-click="resetrm()"><i class="fa fa-refresh"></i>
+                                        Refresh</button>
                                 </div>
 
                                 <!--  <div action="/search" method="post" class="pull-right">
@@ -236,7 +242,7 @@ color: white;" >Contact Detail</th>
                             <!--<th>Availability</th> -->
                             <!-- <th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3">Skills</th> -->
                             <th style="color: white;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Action</th>
-                            <th  style="color: white;" ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Track</th>
+                            <!--<th  style="color: white;" ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3 || userinfodata.RoleId==7">Track</th>-->
                         </tr>
                         </thead>
                         <tbody style="height:320px;">
@@ -283,17 +289,7 @@ border-bottom: 1px solid #eee;
                                        data-placement="top" class="width_edit_icon" data-toggle="tooltip"
                                        data-placement="top" ng-click="editTracking(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.reportingmanager,user.BusinessUnit,user.integraExperience,user.totalExperience,user.Branch)"
                                        title="Tracking Profile" aria-hidden="true"></i>
-
                                     </i>&nbsp; &nbsp; &nbsp;</a>
-                                <!--  <a ng-if="userinfodata.RoleId==5"
-                                href="">
-                                <img src="assets/images/icons/delete icon.png" class="width_edit_icon"
-                                ng-click="deleteEmployeeProfile(user.EmployeeId)"
-                                data-toggle="tooltip" data-placement="top" title="Delete Profile">
-                                </i>
-                                </a> -->
-                                <!--  <a data-toggle="modal" ng-click="skillUpdate(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.RoleID)"
-                                data-target="#ViewSkillsModal" data-whatever="@mdo">View Skills</a> -->
                             </td>
                         </tr>
                         <tr ng-show="filteredEmployee.length == 0"
@@ -301,33 +297,25 @@ border-bottom: 1px solid #eee;
                             <td colspan="15" style="font-weight: bold;margin-left: 41%;position: absolute;">No Data found</td>
                         </tr>
                         </tbody>
-                        <tbody>
-                        </tbody>
-                        <tbody ng-if="userinfodata.RoleId==3" ng-repeat="user in managerEmployeeList | filter:searchText track by $index" style="border:1px solid #e7e7e7;">
-                        <tr>
-                            <td>{{$index+1}}</td>
-                            <!-- <td>
-                            <div class="media">
-                            <img src="assets/images/user.ico" alt="user" class="img-responsive img-circle"> </div>
-                            </td> -->
-                            <td>{{user.EmployeeId}}</td>
-                            <td>{{user.FirstName}} {{user.LastName}}</td>
-                            <!-- <td>{{user.Designation}}</td> -->
-                            <!-- <td>{{user.Email}}</td> -->
-                            <td><i class="fa fa-phone" aria-hidden="true"></i>
+
+                        <tbody style="height:320px; margin-top: -319px">
+                        <tr ng-if="userinfodata.RoleId==3" ng-repeat="user in managerEmployeeList | filter:searchText | orderBy:'EmployeeId'" style="border:1px solid #e7e7e7;">
+                            <td style="width:11%;">{{$index+1}}</td>
+
+                            <td style="width:10%;">{{user.EmployeeId}}</td>
+                            <td style="width:10%;">{{user.FirstName}} {{user.LastName}}</td>
+
+                            <td style="width:19%;"><i class="fa fa-phone" aria-hidden="true"></i>
                                 {{user.ContactNo}}</br><i class="fa fa-envelope" aria-hidden="true"></i>
                                 {{user.Email}}</td>
-                            <td>{{user.reportingmanager}}</td>
-                            <td>{{user.totalExperience}}</td>
-                            <td>
+                            <td style="width:10%;">{{user.reportingmanager}}</td>
+                            <td style="width:10%;">{{user.totalExperience}}</td>
+                            <td style="width:13%;">
                                 <a data-toggle="modal" ng-click="skillUpdate(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.RoleID)"
                                    title="view more skills" data-target="#ViewSkillsModal" data-whatever="@mdo">{{user.PrimarySkill}}</a>
                             </td>
-                            <!-- <td ng-if="user.ModifiedBy == null || user.ModifiedDate == null ">{{user.CreatedBy}} </br>  {{user.CreatedDate}}</td>-->
-                            <td >{{user.ModifiedBy || user.CreatedBy}} </br> {{user.ModifiedDate || user.CreatedDate}}</td>
-                            <!-- <td>{{user.PrimarySkill}}</td> -->
-                            <!--<td>{{user.AvailabilityStatus}}</td> -->
-                            <td>
+                            <td style="width:11%;">{{user.ModifiedBy || user.CreatedBy}} </br> {{user.ModifiedDate || user.CreatedDate}}</td>
+                            <td style="width:14%;">
                                 <a href="" data-toggle="modal" data-target=".bs-example-modal-lg"
                                    style="text-decoration: none;">
                                     <img src="assets/images/icons/edit icon.png" data-toggle="tooltip"
@@ -335,29 +323,26 @@ border-bottom: 1px solid #eee;
                                          data-placement="top" ng-click="editEmployeeStatus(user.EmployeeId)"
                                          title="Edit Profile">
                                     </i>&nbsp; &nbsp; &nbsp;</a>
-                                <!-- <a ng-if="userinfodata.RoleId==3" href="" data-toggle="modal" data-target=".bs-example1-modal-lg"
-                                style="text-decoration: none;">
-                                <i class="fa fa-user-circle-o" data-toggle="tooltip"
-                                data-placement="top" class="width_edit_icon" data-toggle="tooltip"
-                                data-placement="top" ng-click="editTracking(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.reportingmanager,user.BusinessUnit,user.integraExperience,user.totalExperience)"
-                                title="Tracking Profile" aria-hidden="true"></i>
+                                <a  href="" data-toggle="modal" data-target=".bs-example1-modal-lg"
+                                   style="text-decoration: none;">
+                                    <i class="fa fa-user-circle-o" data-toggle="tooltip"
+                                       data-placement="top" class="width_edit_icon" data-toggle="tooltip"
+                                       data-placement="top" ng-click="editTracking(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.reportingmanager,user.BusinessUnit,user.integraExperience,user.totalExperience,user.Branch)"
+                                       title="Tracking Profile" aria-hidden="true"></i>
 
-                                </i>&nbsp; &nbsp; &nbsp;</a> -->
+                                    </i>&nbsp; &nbsp; &nbsp;</a>
                             </td>
                         </tr>
-
+                        <tr ng-show="managerEmployeeList.length == 0"
+                            style="border:1px solid #e7e7e7;">
+                            <td colspan="15" style="font-weight: bold;margin-left: 41%;position: absolute;">No Data found</td>
+                        </tr>
+                        </tbody>
+                        <tbody>
                         </tbody>
                         <tbody style="height:320px;margin-top: -325px;">
 
-
-
-                        <tr style="
-border-bottom: 1px solid #eee;
-" ng-if="userinfodata.RoleId==7"   ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'">
-                            <!-- buEmployeeList
-                             ng-repeat="user in filteredEmployee = (currentEmployeeList | filter : searchText) | orderBy:'EmployeeId'"-->
-                            <!-- <tbody ng-if="userinfodata.RoleId==7"  ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'" style="border:1px solid #e7e7e7;">-->
-                            <!--<tbody ng-if="userinfodata.RoleId==7" ng-repeat="user in buEmployeeList | filter:searchText | orderBy:'EmployeeId'" style="border:1px solid #e7e7e7;"> -->
+                        <tr style="border-bottom: 1px solid #eee;" ng-if="userinfodata.RoleId==7"   ng-repeat="user in filteredEmployee = (buEmployeeList | filter : searchText) | orderBy:'EmployeeId'">
                             <td style="width:10%;">{{$index+1}}</td>
                             <td style="width:10%;">{{user.EmployeeId}}</td>
                             <td style="width:10%;">{{user.FirstName}} &nbsp; {{user.LastName}}</td>
@@ -653,7 +638,7 @@ padding-left: 4%;
             <!--Edit Skills modal start-->
             <div class="modal fade" id="EditSkillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content">
+                    <div class="modal-content" style="width: 537px">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -667,10 +652,10 @@ padding-left: 4%;
                                         <div class="table-responsive">
                                             <table class="table no-margin text-center">
                                                 <thead>
-                                                <tr style="background: #ebecec;">
-                                                    <th style="width:150px;">Category Name</th>
-                                                    <th style="width:150px;">Skill Name</th>
-                                                    <th style="width:150px;">Rating</th>
+                                                <tr style="background: #061743">
+                                                    <th style="width:150px;color: #fdfdfd;">Category Name</th>
+                                                    <th style="width:150px;color: #fdfdfd;">Skill Name</th>
+                                                    <th style="width:150px;color: #fdfdfd;">Rating</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -716,7 +701,7 @@ padding-left: 4%;
                 </div>
 
                 <!--Start Edit employee profile tracking details modal -->
-<div class="modal fade bs-example1-modal-lg" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 || userinfodata.RoleId==7" id="editTracking" tabindex="-1" role="dialog"
+<div class="modal fade bs-example1-modal-lg" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6 || userinfodata.RoleId==7 || userinfodata.RoleId==3 " id="editTracking" tabindex="-1" role="dialog"
 aria-labelledby="myLargeModalLabel">
 <div class="modal-dialog modal-lg" role="document">
 
@@ -911,7 +896,7 @@ class="width_edit_icon" data-toggle="tooltip" data-placement="top">
 <!--<div ng-if = !track.Action> <label>Project Closed</label> </div>-->
 <div>
 <!--<div ng-if = track.Action >-->
-<a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==7" ng-click="updatetrack(track.Id,track.UserId,track.ProjectName,track.CompanyName,track.FromDate,track.ToDate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
+<a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==7 || userinfodata.RoleId==3" ng-click="updatetrack(track.Id,track.UserId,track.ProjectName,track.CompanyName,track.FromDate,track.ToDate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
 data-toggle="modal" data-target="#EditTrackModal" data-whatever="@mdo">
 <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
 class="width_edit_icon" data-toggle="tooltip" data-placement="top">
@@ -1014,7 +999,7 @@ class="width_edit_icon" data-toggle="tooltip" data-placement="top">
 
 
                 <!-- Edit Tracking Project Modal Start -->
-                <div class="modal fade bs-example-modal-lg" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==7" id="EditTrackModal" tabindex="-1" role="dialog"
+                <div class="modal fade bs-example-modal-lg" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==7 || userinfodata.RoleId==3" id="EditTrackModal" tabindex="-1" role="dialog"
                      aria-labelledby="myLargeModalLabel">
                     <div class="modal-dialog modal-md" role="document">
                         <div class="modal-content">
@@ -1781,7 +1766,7 @@ padding-left: 4%;
                 }
             }
 
-            if ( $('#test')[0].type != 'date' ) $('#test').datepicker();
+          //  if ( $('#test')[0].type != 'date' ) $('#test').datepicker();
 
         </script>
         <style>

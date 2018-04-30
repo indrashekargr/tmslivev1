@@ -736,6 +736,72 @@
             }
         },
 
+        "/searchEmployeeResourceSkillsAllRatingForRM/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}/ReportingManager={ReportingManager}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsForHR_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "ReportingManager",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
         "/searchEmployeeResourceSkillsAllStatusForHR/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}": {
             "get": {
                 "tags": [
@@ -918,6 +984,72 @@
             }
         },
 
+        "/searchEmployeeResourceSkillsAllStatusForRM/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}/ReportingManager={ReportingManager}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsAllStatusForRM_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "ReportingManager",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
         "/searchEmployeeResourceSkillsAllRatingAndStatusForBU/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}/buid={buid}": {
             "get": {
                 "tags": [
@@ -963,6 +1095,72 @@
 
                     {
                         "name": "buid",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/searchEmployeeResourceSkillsAllRatingAndStatusForRM/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}/ReportingManager={ReportingManager}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsAllRatingAndStatusForRM_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+
+                    {
+                        "name": "ReportingManager",
                         "in": "path",
                         "required": true,
                         "type": "integer",

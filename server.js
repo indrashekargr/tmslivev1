@@ -1,6 +1,6 @@
 'use strict';
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 8000;
 
 var http = require('http');
 var express = require('express');
@@ -28,6 +28,11 @@ var searchEmployeeResourceSkillsAllStatusForBU = require('./lib/searchEmployeeRe
 var searchEmployeeResourceSkillsAllRatingForBU = require('./lib/searchEmployeeResourceSkillsAllRatingForBU');
 var searchEmployeeResourceSkillsAllRatingAndStatusForBU = require('./lib/searchEmployeeResourceSkillsAllRatingAndStatusForBU');
 
+//Reporting Manager search all employee list based on category, skillname, rating , status
+var searchEmployeeResourceSkillsAllRatingForRM = require('./lib/searchEmployeeResourceSkillsAllRatingForRM');
+var searchEmployeeResourceSkillsAllStatusForRM = require('./lib/searchEmployeeResourceSkillsAllStatusForRM');
+var searchEmployeeResourceSkillsAllRatingAndStatusForRM = require('./lib/searchEmployeeResourceSkillsAllRatingAndStatusForRM');
+
 fs.existsSync = fs.existsSync || require('path').existsSync;
 
 var app = express();
@@ -52,6 +57,10 @@ app.get('/searchEmployeeResourceSkillsAllRatingForBU/CategoryId=:CategoryId/Skil
     next();
 });
 
+app.get('/searchEmployeeResourceSkillsAllRatingForRM/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability/ReportingManager=:ReportingManager', searchEmployeeResourceSkillsAllRatingForRM.searchEmployeeResourceSkillsAllRatingForRM, function(req, res, next){
+    next();
+});
+
 app.get('/searchEmployeeResourceSkillsAllStatusForHR/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability', searchEmployeeResourceSkillsAllStatusForHR.searchEmployeeResourceSkillsAllStatusForHR, function(req, res, next){
     next();
 });
@@ -60,11 +69,19 @@ app.get('/searchEmployeeResourceSkillsAllStatusForBU/CategoryId=:CategoryId/Skil
     next();
 });
 
+app.get('/searchEmployeeResourceSkillsAllStatusForRM/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability/ReportingManager=:ReportingManager', searchEmployeeResourceSkillsAllStatusForRM.searchEmployeeResourceSkillsAllStatusForRM, function(req, res, next){
+    next();
+});
+
 app.get('/searchEmployeeResourceSkillsAllRatingAndStatusForHR/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability', searchEmployeeResourceSkillsAllRatingAndStatusForHR.searchEmployeeResourceSkillsAllRatingAndStatusForHR, function(req, res, next){
     next();
 });
 
 app.get('/searchEmployeeResourceSkillsAllRatingAndStatusForBU/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability/buid=:buid', searchEmployeeResourceSkillsAllRatingAndStatusForBU.searchEmployeeResourceSkillsAllRatingAndStatusForBU, function(req, res, next){
+    next();
+});
+
+app.get('/searchEmployeeResourceSkillsAllRatingAndStatusForRM/CategoryId=:CategoryId/SkillId=:SkillId/Rating=:Rating/Availability=:Availability/ReportingManager=:ReportingManager', searchEmployeeResourceSkillsAllRatingAndStatusForRM.searchEmployeeResourceSkillsAllRatingAndStatusForRM, function(req, res, next){
     next();
 });
 

@@ -63,6 +63,13 @@ window.$scope = $scope;
         });
     }
 
+    //Reset Button for Reporting_Manager Module
+    $scope.resetrm  = function(){
+        $http.get(ApiUrlPrefix + "fetchEmployeeMasterdetailsByManager/" + $scope.userinfodata.EmployeeId).success(function (data) {
+            $scope.managerEmployeeList = data;
+        });
+    }
+
 //Search employee resource skills data for hr
 $scope.searchskill = function(q,r,s,t)
 {
@@ -239,6 +246,72 @@ else{
                     console.log(error);
                 });
             }
+        }
+    }
+
+
+    // Search employee resource skill data for reporting manager login
+    $scope.searchskillforreportingmanager = function(CategoryId,SkillId,Rating,Availability)
+    {
+        console.log(CategoryId+" "+SkillId+" "+Rating+ " "+Availability);
+        if(Rating== null ||Rating== undefined|| Rating=="") {
+            Rating="0";
+        }
+        if(Availability== null ||Availability== undefined|| Availability=="") {
+            Availability="0";
+        }
+        if(CategoryId== undefined && SkillId== undefined){
+            alert("Please select all the mandatory fields");
+        }
+        else if(CategoryId== null || CategoryId== undefined||CategoryId==""){
+            alert("Please select Category");
+        }
+        else if(SkillId== null || SkillId== undefined||SkillId==""){
+            alert("Please select Skill");
+        }
+        else{
+
+            if(CategoryId != null && SkillId != null && Rating != "0" && Availability != null){
+
+                $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsForManager/CategoryId='+CategoryId + "/SkillId="+ SkillId + "/Rating=" + Rating + "/Availability="+ Availability + "/ReportingManager=" +$scope.userinfodata.EmployeeId).success(function (data) {
+                    $scope.managerEmployeeList = data;
+                },function(data){
+                    console.log(data);
+                },function(error){
+                    console.log(error);
+                });
+            }
+
+            if(CategoryId != null && SkillId != null && Rating == "0" && Availability != null){
+                $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllRatingForRM/CategoryId=' + CategoryId + "/SkillId=" + SkillId + "/Rating=" + Rating + "/Availability=" + Availability + "/ReportingManager=" + $scope.userinfodata.EmployeeId).success(function (data) {
+                    $scope.managerEmployeeList = data;
+                },function(data){
+                    console.log(data);
+                },function(error){
+                    console.log(error);
+                });
+            }
+
+            if(CategoryId !=null  && SkillId !=null && Rating !=null && Availability =="0"){
+                $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllStatusForRM/CategoryId='+CategoryId + "/SkillId="+ SkillId + "/Rating= " +Rating +"/Availability="+Availability + "/ReportingManager=" + $scope.userinfodata.EmployeeId).success(function (data) {
+                    $scope.managerEmployeeList = data;
+                },function(data){
+                    console.log(data);
+                },function(error){
+                    console.log(error);
+                });
+            }
+
+            if(CategoryId !=null  && SkillId !=null && Rating == "0" && Availability =="0"){
+                $http.get(ApiUrlPrefix + 'searchEmployeeResourceSkillsAllRatingAndStatusForRM/CategoryId='+CategoryId + "/SkillId="+ SkillId + "/Rating= " +Rating +"/Availability="+Availability + "/ReportingManager=" + $scope.userinfodata.EmployeeId).success(function (data) {
+                    $scope.managerEmployeeList = data;
+                },function(data){
+                    console.log(data);
+                },function(error){
+                    console.log(error);
+                });
+            }
+
         }
     }
 
@@ -593,13 +666,10 @@ $scope.updateskill= function (a,b,c,d,e,j,w)	{
     }
     }
 
-// Fetch All Employee Data for Reporting Manager with manager login
+// Fetch All Employee list of data for Reporting Manager Login
 function employeeManagerList() {
-
 $http.get(ApiUrlPrefix + "fetchEmployeeMasterdetailsByManager/" + $scope.userinfodata.EmployeeId).success(function (response) {
 $scope.managerEmployeeList = response;
-
-//console.log(response);
 });
 }
 employeeManagerList();
@@ -763,27 +833,10 @@ $scope.editTracking = function (a,b,c,d,e,f,g,h,i){
     $scope.integraExperience = g;
     $scope.totalExperience = h;
     $scope.Branch = i;
-   
     $scope.reportingmanager = e;
-    //$scope.Role=i;
     $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+a).success(function (data) {
         $scope.trackdata=data;
-
-     /*   $scope.trackdata[0].addAction = 0;
-console.log($scope.trackdata.length);
-    for(i=0;i < $scope.trackdata.length;i++ ){
-
-        if($scope.trackdata[i].Action == 1){
-            $scope.trackdata[0].addAction = 1
-
-
-        }
-
-    }*/
-
     console.log( $scope.trackdata);
-
-    //console.log(data);
     },function(data){
     console.log(data);
     },function(error){
